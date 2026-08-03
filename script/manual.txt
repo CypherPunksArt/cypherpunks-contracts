@@ -1,0 +1,28 @@
+CYPHERPUNKS — USER MANUAL
+Inscribed onchain at genesis. No server, no company, and no team is required to use what you own. These instructions are permanent, and they outlive us.
+
+WHAT THIS IS
+One generative CypherPunk is auctioned every day for about 27 years: 9,800 daily pieces, plus 200 reserved. No presale, no allowlist, no reserve price. The art, the record, and the market all live onchain.
+
+HOW TO BID
+1. Connect an Ethereum wallet.
+2. On the live auction, enter an amount and place your bid. The opening bid can be any amount. Each later bid must beat the current one by at least 2%, or 0.001 ETH, whichever is greater.
+3. A bid in the final 10 minutes extends the clock by 10 minutes, so an auction cannot be sniped.
+4. If you are outbid, your ETH is returned to you automatically, in the same transaction.
+
+HOW TO SETTLE
+When the clock reaches zero, anyone can settle — call settleCurrentAndCreateNewAuction() on the auction house. Settling mints the punk to the highest bidder, draws the next day's piece from the remaining pool, and opens the next auction. Whoever settles performs the daily reveal in front of everyone, and pays only gas.
+
+NO RESERVE, AND THE BURN
+There is no reserve price: a punk opens to any bid. A punk that receives no bid at all is burned at settlement and can never be minted — that design is spent forever.
+
+THE MAILING LIST
+Winning a punk earns its holder one entry on the onchain mailing list: up to 256 bytes, written during that punk's window (from its settlement until the next auction settles), kept forever.
+
+HOW TO VERIFY
+Everything is onchain and reproducible, with no website or explorer required:
+- ownerOf(tokenId) returns who holds a punk.
+- punkForToken(tokenId) returns the design piece a token drew; anyone can reproduce that draw from the genesis VRF seed written once at launch.
+- The Descriptor renders every punk's art fully onchain.
+
+If every website and block explorer disappears, this manual and your CypherPunks remain — readable straight from the chain.

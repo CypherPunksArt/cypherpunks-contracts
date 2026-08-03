@@ -1,0 +1,2095 @@
+{
+ "fingerprint": "sha256:a2cd9560a1370809e2ca663d8e011092707a090d9333de159e6ec2ce9f8fe13f",
+ "canvas": [
+  40,
+  40
+ ],
+ "z_order_bottom_up": [
+  "Background",
+  "Body",
+  "Clothing",
+  "Head",
+  "Earring",
+  "Eyes",
+  "Mouth",
+  "Accessory"
+ ],
+ "background_rgba": [
+  99,
+  133,
+  150,
+  255
+ ],
+ "proof": "all 10,000 punks composite byte-exact vs docs/art/renders",
+ "flags": [
+  "FLAG (sign-off required): ('Male', 'Head', 'Combover') is pixel-proven to render the art in head_trump.png (unique non-vacuous survivor over 82 wearers; raw-RGBA sha256 e65aa9a055b38bc6\u2026). Per the never-bind rule the file does not bind; the combo binds a byte-identical derived copy derived/head_combover.png. The on-chain bytes are forced by the frozen renders either way."
+ ],
+ "combos": {
+  "Female / Accessory / Angel Wings": {
+   "file": "accessory_wings_fem.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Basketball": {
+   "file": "accessory_basketball 1.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Boombox": {
+   "file": "accessory_boombox.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Clock Necklace": {
+   "file": "accessory_clock.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Cobra": {
+   "file": "accessory_cobra.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Dollar Bills": {
+   "file": "accessory_dollar_bills.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Drone": {
+   "file": "accessory_drone.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Gold Boombox": {
+   "file": "accessory_boombox_gold.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Gold Coins": {
+   "file": "accessory_gold_coins.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Gold Pet Bird": {
+   "file": "accessory_bird_gold.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Gold Pet Cat": {
+   "file": "accessory_cat_gold.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Katana": {
+   "file": "accessory_katana.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Katana Flame": {
+   "file": "accessory_katana_flame.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Laptop": {
+   "file": "accessory_laptop.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Lock Necklace": {
+   "file": "accessory_lock.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Machine Gun": {
+   "file": "accessory_machine_gun.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Martini": {
+   "file": "accessory_martini.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Money Printer": {
+   "file": "accessory_moneygun.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Pet Bird": {
+   "file": "accessory_bird.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Pet Cat": {
+   "file": "accessory_cat.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Poker Chips": {
+   "file": "accessory_poker_chips.png",
+   "wearers": 4
+  },
+  "Female / Accessory / Punk Necklace": {
+   "file": "accessory_eth_chain.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Regular Animals": {
+   "file": "accessory_beeplebot.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Shotgun": {
+   "file": "accessory_shotgun.png",
+   "wearers": 3
+  },
+  "Female / Accessory / Spray Can": {
+   "file": "accessory_spraycan.png",
+   "wearers": 1
+  },
+  "Female / Accessory / Unicorns": {
+   "file": "accessory_unicorns.png",
+   "wearers": 2
+  },
+  "Female / Body / Albino": {
+   "file": "female_body_albino.png",
+   "wearers": 52
+  },
+  "Female / Body / Alien": {
+   "file": "female_body_alien.png",
+   "wearers": 2
+  },
+  "Female / Body / Ape": {
+   "file": "female_body_ape.png",
+   "wearers": 3
+  },
+  "Female / Body / Bones": {
+   "file": "female_body_skeleton.png",
+   "wearers": 26
+  },
+  "Female / Body / Coffee": {
+   "file": "female_body_coffee.png",
+   "wearers": 192
+  },
+  "Female / Body / Cyborg": {
+   "file": "female_body_cyborg.png",
+   "wearers": 25
+  },
+  "Female / Body / Gold": {
+   "file": "female_body_gold.png",
+   "wearers": 4
+  },
+  "Female / Body / Latte": {
+   "file": "female_body_latte.png",
+   "wearers": 392
+  },
+  "Female / Body / Mocha": {
+   "file": "female_body_mocha.png",
+   "wearers": 182
+  },
+  "Female / Body / Orange": {
+   "file": "female_body_orange.png",
+   "wearers": 54
+  },
+  "Female / Body / Pink": {
+   "file": "female_body_pink.png",
+   "wearers": 55
+  },
+  "Female / Body / Unobtainium": {
+   "file": "female_body_unobtainium.png",
+   "wearers": 1
+  },
+  "Female / Body / Zombie": {
+   "file": "female_body_zombie.png",
+   "wearers": 8
+  },
+  "Female / Clothing / American Flag": {
+   "file": "female_clothing_flag.png",
+   "wearers": 9
+  },
+  "Female / Clothing / Baywatch": {
+   "file": "female_clothing_baywatch.png",
+   "wearers": 2
+  },
+  "Female / Clothing / Black Dress": {
+   "file": "female_clothing_dress_black.png",
+   "wearers": 55
+  },
+  "Female / Clothing / Black Strapless": {
+   "file": "female_clothing_bra_black.png",
+   "wearers": 23
+  },
+  "Female / Clothing / Black T": {
+   "file": "female_clothing_tshirt_black.png",
+   "wearers": 87
+  },
+  "Female / Clothing / Blue Sports Bra": {
+   "file": "female_clothing_sportsbra_blue.png",
+   "wearers": 11
+  },
+  "Female / Clothing / Boxing Robe": {
+   "file": "female_clothing_boxing.png",
+   "wearers": 20
+  },
+  "Female / Clothing / Croc Hoodie": {
+   "file": "female_clothing_croc_hoodie.png",
+   "wearers": 6
+  },
+  "Female / Clothing / Doomed T": {
+   "file": "female_clothing_doomed_female.png",
+   "wearers": 10
+  },
+  "Female / Clothing / Doomed T Red": {
+   "file": "female_clothing_doomed_red_crop.png",
+   "wearers": 1
+  },
+  "Female / Clothing / Firefighter": {
+   "file": "female_clothing_firefighter.png",
+   "wearers": 29
+  },
+  "Female / Clothing / Flower Dress": {
+   "file": "female_clothing_dress_flowers.png",
+   "wearers": 43
+  },
+  "Female / Clothing / Gold Cape": {
+   "file": "female_clothing_cape_gold.png",
+   "wearers": 4
+  },
+  "Female / Clothing / Green Dress": {
+   "file": "female_clothing_dress_green.png",
+   "wearers": 55
+  },
+  "Female / Clothing / Hawaiian": {
+   "file": "female_clothing_hawaiin.png",
+   "wearers": 34
+  },
+  "Female / Clothing / Kimono": {
+   "file": "female_clothing_komono.png",
+   "wearers": 22
+  },
+  "Female / Clothing / Paramedic": {
+   "file": "female_clothing_paramedic.png",
+   "wearers": 14
+  },
+  "Female / Clothing / Peach T": {
+   "file": "female_clothing_tshirt_peach.png",
+   "wearers": 78
+  },
+  "Female / Clothing / Pink Bathrobe": {
+   "file": "female_clothing_robe_pink.png",
+   "wearers": 15
+  },
+  "Female / Clothing / Pink Cape": {
+   "file": "female_clothing_cape_pink.png",
+   "wearers": 5
+  },
+  "Female / Clothing / Pink Cowboy Jacket": {
+   "file": "female_clothing_cowboy.png",
+   "wearers": 24
+  },
+  "Female / Clothing / Pink Dress": {
+   "file": "female_clothing_dress_pink.png",
+   "wearers": 42
+  },
+  "Female / Clothing / Police": {
+   "file": "female_clothing_police.png",
+   "wearers": 39
+  },
+  "Female / Clothing / Polka Dot Dress": {
+   "file": "female_clothing_dress_polkadot.png",
+   "wearers": 25
+  },
+  "Female / Clothing / Prison Stripes": {
+   "file": "female_clothing_jail_stripes_fem.png",
+   "wearers": 2
+  },
+  "Female / Clothing / Punk Jacket 3": {
+   "file": "female_clothing_punk.png",
+   "wearers": 21
+  },
+  "Female / Clothing / Punk Jacket 4": {
+   "file": "female_clothing_punk2.png",
+   "wearers": 10
+  },
+  "Female / Clothing / Red Sports Bra": {
+   "file": "female_clothing_sportsbra_red.png",
+   "wearers": 13
+  },
+  "Female / Clothing / Red Strapless": {
+   "file": "female_clothing_bra_red.png",
+   "wearers": 28
+  },
+  "Female / Clothing / Spot Puffer": {
+   "file": "clothing_puffa_hurst.png",
+   "wearers": 9
+  },
+  "Female / Clothing / Striped T": {
+   "file": "female_clothing_tshirt_stripe.png",
+   "wearers": 18
+  },
+  "Female / Clothing / Suit": {
+   "file": "female_clothing_suit.png",
+   "wearers": 40
+  },
+  "Female / Clothing / Tattoos": {
+   "file": "female_clothing_tattoos.png",
+   "wearers": 42
+  },
+  "Female / Clothing / Tiger Hoodie": {
+   "file": "female_clothing_tiger_hoodie.png",
+   "wearers": 1
+  },
+  "Female / Clothing / Whale Hoodie": {
+   "file": "female_clothing_whale_hoodie.png",
+   "wearers": 1
+  },
+  "Female / Clothing / White Bathrobe": {
+   "file": "female_clothing_robe_white.png",
+   "wearers": 37
+  },
+  "Female / Clothing / White T": {
+   "file": "female_clothing_tshirt_white.png",
+   "wearers": 97
+  },
+  "Female / Earring / Gold Hoop": {
+   "file": "earring_gold_hoop.png",
+   "wearers": 9
+  },
+  "Female / Earring / Pearl": {
+   "file": "earring_pearl.png",
+   "wearers": 4
+  },
+  "Female / Eyes / 3D Glasses": {
+   "file": "eyes_3D.png",
+   "wearers": 20
+  },
+  "Female / Eyes / Aviators": {
+   "file": "eyes_aviators.png",
+   "wearers": 1
+  },
+  "Female / Eyes / Blue": {
+   "file": "eyes_teal.png",
+   "wearers": 234
+  },
+  "Female / Eyes / Blue Beams": {
+   "file": "eyes_laserangle_teal.png",
+   "wearers": 3
+  },
+  "Female / Eyes / Brown": {
+   "file": "eyes_brown.png",
+   "wearers": 294
+  },
+  "Female / Eyes / Cosmo Shades": {
+   "file": "eyes_cosomo.png",
+   "wearers": 3
+  },
+  "Female / Eyes / Cyborg": {
+   "file": "eyes_cyborg.png",
+   "wearers": 33
+  },
+  "Female / Eyes / Diamond": {
+   "file": "eyes_diamond.png",
+   "wearers": 2
+  },
+  "Female / Eyes / Eye Patch": {
+   "file": "eyes_patch.png",
+   "wearers": 8
+  },
+  "Female / Eyes / Fire": {
+   "file": "eyes_fire.png",
+   "wearers": 5
+  },
+  "Female / Eyes / Gaming Control": {
+   "file": "eyes_gamercontrol.png",
+   "wearers": 9
+  },
+  "Female / Eyes / Gold": {
+   "file": "eyes_gold.png",
+   "wearers": 1
+  },
+  "Female / Eyes / Gold Aviators": {
+   "file": "eyes_aviators_gold 1.png",
+   "wearers": 2
+  },
+  "Female / Eyes / High": {
+   "file": "eyes_high.png",
+   "wearers": 16
+  },
+  "Female / Eyes / Laser Eyes": {
+   "file": "eyes_laser_red.png",
+   "wearers": 10
+  },
+  "Female / Eyes / Max Pain": {
+   "file": "eyes_maxpain.png",
+   "wearers": 9
+  },
+  "Female / Eyes / Mogged": {
+   "file": "eyes_mogged.png",
+   "wearers": 5
+  },
+  "Female / Eyes / Nerd Glasses": {
+   "file": "eyes_nerd.png",
+   "wearers": 40
+  },
+  "Female / Eyes / Noggles": {
+   "file": "eyes_noggles.png",
+   "wearers": 13
+  },
+  "Female / Eyes / Pink": {
+   "file": "eyes_pink.png",
+   "wearers": 80
+  },
+  "Female / Eyes / Poker Face": {
+   "file": "eyes_poker_glasses.png",
+   "wearers": 11
+  },
+  "Female / Eyes / Purple Retro": {
+   "file": "eyes_retro_purple.png",
+   "wearers": 10
+  },
+  "Female / Eyes / Red": {
+   "file": "eyes_red.png",
+   "wearers": 64
+  },
+  "Female / Eyes / Right Click": {
+   "file": "eyes_right_click.png",
+   "wearers": 9
+  },
+  "Female / Eyes / Scar": {
+   "file": "eyes_scar.png",
+   "wearers": 6
+  },
+  "Female / Eyes / Shades": {
+   "file": "eyes_raybans.png",
+   "wearers": 46
+  },
+  "Female / Eyes / Tired": {
+   "file": "eyes_tired.png",
+   "wearers": 18
+  },
+  "Female / Eyes / VR": {
+   "file": "eyes_vr_headset.png",
+   "wearers": 8
+  },
+  "Female / Eyes / Welding Goggles": {
+   "file": "eyes_weld_goggles.png",
+   "wearers": 28
+  },
+  "Female / Eyes / XCOPY": {
+   "file": "eyes_xcopy.png",
+   "wearers": 8
+  },
+  "Female / Head / Beret": {
+   "file": "female_head_beret.png",
+   "wearers": 23
+  },
+  "Female / Head / Black BW Cap": {
+   "file": "female_head_capback_black.png",
+   "wearers": 25
+  },
+  "Female / Head / Black Headphones": {
+   "file": "head_headphones_black.png",
+   "wearers": 8
+  },
+  "Female / Head / Black Long": {
+   "file": "female_hair_long_black.png",
+   "wearers": 58
+  },
+  "Female / Head / Black Mohawk": {
+   "file": "head_black_mohawk.png",
+   "wearers": 15
+  },
+  "Female / Head / Black Mullet": {
+   "file": "head_mullet_black.png",
+   "wearers": 22
+  },
+  "Female / Head / Blonde 50s": {
+   "file": "female_head_monroe.png",
+   "wearers": 16
+  },
+  "Female / Head / Blonde Karen": {
+   "file": "female_hair_karen_blonde.png",
+   "wearers": 23
+  },
+  "Female / Head / Blonde Long": {
+   "file": "female_hair_long_blonde.png",
+   "wearers": 34
+  },
+  "Female / Head / Blonde Mohawk": {
+   "file": "head_blonde_mohawk.png",
+   "wearers": 13
+  },
+  "Female / Head / Blonde Mullet": {
+   "file": "head_mullet_blonde.png",
+   "wearers": 11
+  },
+  "Female / Head / Blonde Pigtails": {
+   "file": "female_hair_pigtails_blonde.png",
+   "wearers": 23
+  },
+  "Female / Head / Blonde Sidehair": {
+   "file": "female_hair_side_blonde.png",
+   "wearers": 59
+  },
+  "Female / Head / Blue Mullet": {
+   "file": "head_mullet_blue.png",
+   "wearers": 16
+  },
+  "Female / Head / Blue Pigtails": {
+   "file": "female_hair_pigtails_blue.png",
+   "wearers": 39
+  },
+  "Female / Head / Blue Tiara": {
+   "file": "female_head_tiara_blue.png",
+   "wearers": 6
+  },
+  "Female / Head / Brown Mohawk": {
+   "file": "head_brown_mohawk.png",
+   "wearers": 18
+  },
+  "Female / Head / Brown Mullet": {
+   "file": "head_mullet_brown.png",
+   "wearers": 28
+  },
+  "Female / Head / Brunette Karen": {
+   "file": "female_hair_karen_brown.png",
+   "wearers": 22
+  },
+  "Female / Head / Brunette Long": {
+   "file": "female_hair_long_brown.png",
+   "wearers": 47
+  },
+  "Female / Head / Brunette Pigtails": {
+   "file": "female_hair_pigtails_brown.png",
+   "wearers": 37
+  },
+  "Female / Head / Brunette Sidehair": {
+   "file": "female_hair_side_brown.png",
+   "wearers": 56
+  },
+  "Female / Head / Bunny Ears": {
+   "file": "head_bunny.png",
+   "wearers": 6
+  },
+  "Female / Head / Captains Hat": {
+   "file": "head_captain.png",
+   "wearers": 7
+  },
+  "Female / Head / Crazy 80s": {
+   "file": "female_head_crazy.png",
+   "wearers": 8
+  },
+  "Female / Head / Fireman Helmet": {
+   "file": "head_fireman.png",
+   "wearers": 21
+  },
+  "Female / Head / Ginger Mohawk": {
+   "file": "head_ginger_mohawk.png",
+   "wearers": 8
+  },
+  "Female / Head / Ginger Mullet": {
+   "file": "head_mullet_ginger.png",
+   "wearers": 15
+  },
+  "Female / Head / Ginger Pigtails": {
+   "file": "female_hair_pigtails_ginger.png",
+   "wearers": 14
+  },
+  "Female / Head / Gold Headphones": {
+   "file": "head_headphones_gold.png",
+   "wearers": 1
+  },
+  "Female / Head / Gold Mohawk": {
+   "file": "head_gold_mohawk.png",
+   "wearers": 2
+  },
+  "Female / Head / Green Clown": {
+   "file": "head_clown.png",
+   "wearers": 9
+  },
+  "Female / Head / Halo": {
+   "file": "head_halo.png",
+   "wearers": 3
+  },
+  "Female / Head / Hard Hat": {
+   "file": "head_hardhat.png",
+   "wearers": 15
+  },
+  "Female / Head / Navy Beanie": {
+   "file": "female_head_beanie_black.png",
+   "wearers": 20
+  },
+  "Female / Head / On Fire": {
+   "file": "head_fire.png",
+   "wearers": 3
+  },
+  "Female / Head / Orange Beanie": {
+   "file": "female_head_beanie_orange.png",
+   "wearers": 12
+  },
+  "Female / Head / Orange Cap": {
+   "file": "female_head_cap_yellow.png",
+   "wearers": 28
+  },
+  "Female / Head / Pink Bow": {
+   "file": "female_hair_bow_pink.png",
+   "wearers": 10
+  },
+  "Female / Head / Pink Sidehair": {
+   "file": "female_hair_side_pink.png",
+   "wearers": 25
+  },
+  "Female / Head / Pirate Hat": {
+   "file": "head_pirate.png",
+   "wearers": 12
+  },
+  "Female / Head / Purple Long": {
+   "file": "female_hair_long_purple.png",
+   "wearers": 19
+  },
+  "Female / Head / Purple Mullet": {
+   "file": "head_mullet_purple.png",
+   "wearers": 16
+  },
+  "Female / Head / Purple Tiara": {
+   "file": "female_head_tiara_purple.png",
+   "wearers": 4
+  },
+  "Female / Head / Rainbow Mohawk": {
+   "file": "head_rainbow_mohawk.png",
+   "wearers": 3
+  },
+  "Female / Head / Red Bow": {
+   "file": "female_hair_bow_red.png",
+   "wearers": 9
+  },
+  "Female / Head / Red Headphones": {
+   "file": "head_headphones_red.png",
+   "wearers": 3
+  },
+  "Female / Head / Red Sidehair": {
+   "file": "female_hair_side_red.png",
+   "wearers": 46
+  },
+  "Female / Head / Red Visor": {
+   "file": "head_maccas.png",
+   "wearers": 19
+  },
+  "Female / Head / Sombrero": {
+   "file": "head_sumbrero.png",
+   "wearers": 9
+  },
+  "Female / Head / Squiggle": {
+   "file": "head_squiggle.png",
+   "wearers": 26
+  },
+  "Female / Head / Viking Helmet": {
+   "file": "head_viking.png",
+   "wearers": 8
+  },
+  "Female / Head / Wizard Hat": {
+   "file": "head_wizard.png",
+   "wearers": 8
+  },
+  "Female / Mouth / Angry": {
+   "file": "female_mouth_angry.png",
+   "wearers": 106
+  },
+  "Female / Mouth / Banana": {
+   "file": "female_mouth_banana.png",
+   "wearers": 12
+  },
+  "Female / Mouth / Braces": {
+   "file": "female_mouth_braces.png",
+   "wearers": 3
+  },
+  "Female / Mouth / Cigar": {
+   "file": "female_mouth_cigar.png",
+   "wearers": 31
+  },
+  "Female / Mouth / Diamond Tooth": {
+   "file": "female_mouth_diamond.png",
+   "wearers": 1
+  },
+  "Female / Mouth / Focused": {
+   "file": "mouth_focused.png",
+   "wearers": 146
+  },
+  "Female / Mouth / Gold Tooth": {
+   "file": "female_mouth_gold_tooth.png",
+   "wearers": 5
+  },
+  "Female / Mouth / Goofy": {
+   "file": "female_mouth_goofy.png",
+   "wearers": 25
+  },
+  "Female / Mouth / Goth Lipstick": {
+   "file": "female_mouth_goth.png",
+   "wearers": 3
+  },
+  "Female / Mouth / Grills": {
+   "file": "female_mouth_grills.png",
+   "wearers": 1
+  },
+  "Female / Mouth / Grin": {
+   "file": "female_mouth_smile.png",
+   "wearers": 126
+  },
+  "Female / Mouth / Happy": {
+   "file": "mouth_happy.png",
+   "wearers": 113
+  },
+  "Female / Mouth / Joint": {
+   "file": "female_mouth_joint.png",
+   "wearers": 28
+  },
+  "Female / Mouth / Missing Teeth": {
+   "file": "female_mouth_missing_teeth.png",
+   "wearers": 29
+  },
+  "Female / Mouth / Pink Lipstick": {
+   "file": "female_mouth_pink.png",
+   "wearers": 11
+  },
+  "Female / Mouth / Pipe": {
+   "file": "female_mouth_pipe.png",
+   "wearers": 20
+  },
+  "Female / Mouth / Pizza": {
+   "file": "female_mouth_pizza.png",
+   "wearers": 18
+  },
+  "Female / Mouth / Relaxed": {
+   "file": "female_mouth_relaxed.png",
+   "wearers": 135
+  },
+  "Female / Mouth / Sad": {
+   "file": "female_mouth_sad.png",
+   "wearers": 113
+  },
+  "Female / Mouth / Tongue Out": {
+   "file": "female_mouth_tongue.png",
+   "wearers": 9
+  },
+  "Female / Mouth / Toothpick": {
+   "file": "female_mouth_toothpick.png",
+   "wearers": 30
+  },
+  "Female / Mouth / Vampire": {
+   "file": "female_mouth_vampire.png",
+   "wearers": 2
+  },
+  "Female / Mouth / Vape": {
+   "file": "female_mouth_vape.png",
+   "wearers": 29
+  },
+  "Male / Accessory / Angel Wings": {
+   "file": "accessory_angel_wings.png",
+   "wearers": 27
+  },
+  "Male / Accessory / Anonymous Mask": {
+   "file": "accessory_anonymous.png",
+   "wearers": 9
+  },
+  "Male / Accessory / Basketball": {
+   "file": "accessory_basketball 1.png",
+   "wearers": 1
+  },
+  "Male / Accessory / Boombox": {
+   "file": "accessory_boombox.png",
+   "wearers": 32
+  },
+  "Male / Accessory / Clock Necklace": {
+   "file": "accessory_clock.png",
+   "wearers": 9
+  },
+  "Male / Accessory / Cobra": {
+   "file": "accessory_cobra.png",
+   "wearers": 8
+  },
+  "Male / Accessory / Dollar Bills": {
+   "file": "accessory_dollar_bills.png",
+   "wearers": 32
+  },
+  "Male / Accessory / Drone": {
+   "file": "accessory_drone.png",
+   "wearers": 1
+  },
+  "Male / Accessory / Flame Thrower": {
+   "file": "accessory_flame_thrower.png",
+   "wearers": 32
+  },
+  "Male / Accessory / Frog": {
+   "file": "accessory_frog.png",
+   "wearers": 1
+  },
+  "Male / Accessory / Gold Boombox": {
+   "file": "accessory_boombox_gold.png",
+   "wearers": 10
+  },
+  "Male / Accessory / Gold Cobra": {
+   "file": "accessory_cobra_gold.png",
+   "wearers": 1
+  },
+  "Male / Accessory / Gold Coins": {
+   "file": "accessory_gold_coins.png",
+   "wearers": 8
+  },
+  "Male / Accessory / Gold Pet Bird": {
+   "file": "accessory_bird_gold.png",
+   "wearers": 8
+  },
+  "Male / Accessory / Gold Pet Cat": {
+   "file": "accessory_cat_gold.png",
+   "wearers": 9
+  },
+  "Male / Accessory / Katana": {
+   "file": "accessory_katana.png",
+   "wearers": 31
+  },
+  "Male / Accessory / Katana Flame": {
+   "file": "accessory_katana_flame.png",
+   "wearers": 9
+  },
+  "Male / Accessory / Laptop": {
+   "file": "accessory_laptop.png",
+   "wearers": 8
+  },
+  "Male / Accessory / Lock Necklace": {
+   "file": "accessory_lock.png",
+   "wearers": 9
+  },
+  "Male / Accessory / Machine Gun": {
+   "file": "accessory_machine_gun.png",
+   "wearers": 31
+  },
+  "Male / Accessory / Money Printer": {
+   "file": "accessory_moneygun.png",
+   "wearers": 32
+  },
+  "Male / Accessory / Pet Bird": {
+   "file": "accessory_bird.png",
+   "wearers": 31
+  },
+  "Male / Accessory / Pet Cat": {
+   "file": "accessory_cat.png",
+   "wearers": 31
+  },
+  "Male / Accessory / Poker Chips": {
+   "file": "accessory_poker_chips.png",
+   "wearers": 30
+  },
+  "Male / Accessory / Popcorn": {
+   "file": "accessory_popcorn.png",
+   "wearers": 31
+  },
+  "Male / Accessory / Punk Necklace": {
+   "file": "accessory_eth_chain.png",
+   "wearers": 9
+  },
+  "Male / Accessory / Regular Animals": {
+   "file": "accessory_beeplebot.png",
+   "wearers": 1
+  },
+  "Male / Accessory / Shotgun": {
+   "file": "accessory_shotgun.png",
+   "wearers": 31
+  },
+  "Male / Accessory / Spray Can": {
+   "file": "accessory_spraycan.png",
+   "wearers": 1
+  },
+  "Male / Accessory / Unicorns": {
+   "file": "accessory_unicorns.png",
+   "wearers": 30
+  },
+  "Male / Accessory / Whisky": {
+   "file": "accessory_whisky.png",
+   "wearers": 1
+  },
+  "Male / Body / Albino": {
+   "file": "body_albino.png",
+   "wearers": 478
+  },
+  "Male / Body / Alien": {
+   "file": "body_alien.png",
+   "wearers": 7
+  },
+  "Male / Body / Ape": {
+   "file": "body_ape.png",
+   "wearers": 21
+  },
+  "Male / Body / Bones": {
+   "file": "body_skeleton.png",
+   "wearers": 238
+  },
+  "Male / Body / Coffee": {
+   "file": "body_coffee.png",
+   "wearers": 1663
+  },
+  "Male / Body / Cyborg": {
+   "file": "body_cyborg2.png",
+   "wearers": 239
+  },
+  "Male / Body / Gold": {
+   "file": "body_gold.png",
+   "wearers": 42
+  },
+  "Male / Body / Latte": {
+   "file": "body_latte.png",
+   "wearers": 3471
+  },
+  "Male / Body / Mocha": {
+   "file": "body_mocha.png",
+   "wearers": 1809
+  },
+  "Male / Body / Orange": {
+   "file": "body_orange.png",
+   "wearers": 477
+  },
+  "Male / Body / Pink": {
+   "file": "body_pink.png",
+   "wearers": 475
+  },
+  "Male / Body / Unobtainium": {
+   "file": "body_unobtainium.png",
+   "wearers": 4
+  },
+  "Male / Body / Zombie": {
+   "file": "body_zombie.png",
+   "wearers": 80
+  },
+  "Male / Clothing / #23 Jersey": {
+   "file": "clothing_23_jersey.png",
+   "wearers": 26
+  },
+  "Male / Clothing / #33 Jersey": {
+   "file": "clothing_33_jersey.png",
+   "wearers": 33
+  },
+  "Male / Clothing / #8 Jersey": {
+   "file": "clothing_8_jersey.png",
+   "wearers": 46
+  },
+  "Male / Clothing / American Flag": {
+   "file": "accessory_american_flag.png",
+   "wearers": 95
+  },
+  "Male / Clothing / Ammo": {
+   "file": "clothing_ammo.png",
+   "wearers": 124
+  },
+  "Male / Clothing / Beeple T": {
+   "file": "clothing_beepleshirt.png",
+   "wearers": 32
+  },
+  "Male / Clothing / Black Hoodie": {
+   "file": "clothing_hoodieup_black.png",
+   "wearers": 247
+  },
+  "Male / Clothing / Black T": {
+   "file": "clothing_black_t_male.png",
+   "wearers": 826
+  },
+  "Male / Clothing / Black Tank": {
+   "file": "clothing_tank_black.png",
+   "wearers": 406
+  },
+  "Male / Clothing / Boxing Robe": {
+   "file": "clothing_boxing_robe.png",
+   "wearers": 100
+  },
+  "Male / Clothing / Bunny T": {
+   "file": "clothing_tshirt_bunnyt.png",
+   "wearers": 73
+  },
+  "Male / Clothing / Chef": {
+   "file": "clothing_chef.png",
+   "wearers": 84
+  },
+  "Male / Clothing / Cowboy Jacket": {
+   "file": "clothing_cowboy.png",
+   "wearers": 130
+  },
+  "Male / Clothing / Croc Hoodie": {
+   "file": "clothing_hoodie_croc.png",
+   "wearers": 27
+  },
+  "Male / Clothing / Doomed T": {
+   "file": "clothing_tshirt_doomed.png",
+   "wearers": 91
+  },
+  "Male / Clothing / Doomed T Mono": {
+   "file": "clothing_tshirt_doomed_mono.png",
+   "wearers": 1
+  },
+  "Male / Clothing / Doomed T Red": {
+   "file": "clothing_tshirt_doomed_red.png",
+   "wearers": 9
+  },
+  "Male / Clothing / Fidenza T": {
+   "file": "clothing_tshirt_fidenza.png",
+   "wearers": 32
+  },
+  "Male / Clothing / Firefighter": {
+   "file": "clothing_fireman.png",
+   "wearers": 82
+  },
+  "Male / Clothing / Gold Cape": {
+   "file": "clothing_cape_gold.png",
+   "wearers": 24
+  },
+  "Male / Clothing / Gold Hoodie": {
+   "file": "clothing_hoodieup_gold.png",
+   "wearers": 9
+  },
+  "Male / Clothing / Gold Jacket": {
+   "file": "clothing_jacket_gold.png",
+   "wearers": 13
+  },
+  "Male / Clothing / Green Sweater": {
+   "file": "clothing_sweater_green.png",
+   "wearers": 89
+  },
+  "Male / Clothing / Hawaiian": {
+   "file": "clothing_hawaiian.png",
+   "wearers": 91
+  },
+  "Male / Clothing / JPG T": {
+   "file": "clothing_tshirt_jpeg.png",
+   "wearers": 33
+  },
+  "Male / Clothing / Kimono": {
+   "file": "clothing_camono.png",
+   "wearers": 160
+  },
+  "Male / Clothing / Leather Jacket": {
+   "file": "clothing_jacket_leather.png",
+   "wearers": 175
+  },
+  "Male / Clothing / Magenta T": {
+   "file": "clothing_magenta_t_male.png",
+   "wearers": 818
+  },
+  "Male / Clothing / Moodeng T": {
+   "file": "clothing_tshirt_moodeng.png",
+   "wearers": 85
+  },
+  "Male / Clothing / Paramedic": {
+   "file": "clothing_paramedic.png",
+   "wearers": 77
+  },
+  "Male / Clothing / Peach Tank": {
+   "file": "clothing_tank_peach.png",
+   "wearers": 481
+  },
+  "Male / Clothing / Pinstripe Suit": {
+   "file": "clothing_pinstripe_suit_male.png",
+   "wearers": 176
+  },
+  "Male / Clothing / Police": {
+   "file": "clothing_police_ny.png",
+   "wearers": 60
+  },
+  "Male / Clothing / Prison Stripes": {
+   "file": "clothing_tahirt_jail.png",
+   "wearers": 98
+  },
+  "Male / Clothing / Punk Jacket 1": {
+   "file": "clothing_jacket_punk.png",
+   "wearers": 124
+  },
+  "Male / Clothing / Punk Jacket 2": {
+   "file": "clothing_jacket_punk2.png",
+   "wearers": 187
+  },
+  "Male / Clothing / Purple Bathrobe": {
+   "file": "clothing_bathrobe_purple.png",
+   "wearers": 55
+  },
+  "Male / Clothing / Purple Cape": {
+   "file": "clothing_cape_purple.png",
+   "wearers": 61
+  },
+  "Male / Clothing / Red Cape": {
+   "file": "clothing_cape_red.png",
+   "wearers": 123
+  },
+  "Male / Clothing / Ripped T": {
+   "file": "clothing_tshirt_ripped.png",
+   "wearers": 133
+  },
+  "Male / Clothing / Sky Blue Sweater": {
+   "file": "clothing_sweater_blue.png",
+   "wearers": 85
+  },
+  "Male / Clothing / Spacesuit": {
+   "file": "clothing_spacesuit.png",
+   "wearers": 41
+  },
+  "Male / Clothing / Spot Puffer": {
+   "file": "clothing_puffa_hurst.png",
+   "wearers": 32
+  },
+  "Male / Clothing / Suit": {
+   "file": "clothing_suit_male.png",
+   "wearers": 187
+  },
+  "Male / Clothing / Tattoos": {
+   "file": "clothing_tattoos.png",
+   "wearers": 160
+  },
+  "Male / Clothing / Teal T": {
+   "file": "clothing_teal_t_male.png",
+   "wearers": 817
+  },
+  "Male / Clothing / Tiger Hoodie": {
+   "file": "clothing_hoodie_tiger.png",
+   "wearers": 29
+  },
+  "Male / Clothing / Unbuttoned T": {
+   "file": "clothing_shirt_open.png",
+   "wearers": 159
+  },
+  "Male / Clothing / Vitalik T": {
+   "file": "clothing_tshirt_vitalik.png",
+   "wearers": 86
+  },
+  "Male / Clothing / Wallstreet Suit": {
+   "file": "clothing_suit_wolf.png",
+   "wearers": 115
+  },
+  "Male / Clothing / Whale Hoodie": {
+   "file": "clothing_hoodie_whale.png",
+   "wearers": 29
+  },
+  "Male / Clothing / White Bathrobe": {
+   "file": "clothing_bathrobe_white.png",
+   "wearers": 87
+  },
+  "Male / Clothing / White Sweater": {
+   "file": "clothing_sweater_white.png",
+   "wearers": 86
+  },
+  "Male / Clothing / White T": {
+   "file": "clothing_white_t_male.png",
+   "wearers": 820
+  },
+  "Male / Clothing / White Tank": {
+   "file": "clothing_tank_white.png",
+   "wearers": 492
+  },
+  "Male / Clothing / Yellow Sweater": {
+   "file": "clothing_sweater_yellow.png",
+   "wearers": 51
+  },
+  "Male / Earring / Crucifix": {
+   "file": "earring_crucifix.png",
+   "wearers": 7
+  },
+  "Male / Earring / Diamond": {
+   "file": "earring_diamond.png",
+   "wearers": 7
+  },
+  "Male / Earring / Gold": {
+   "file": "earring_gold.png",
+   "wearers": 8
+  },
+  "Male / Earring / Pirate": {
+   "file": "earring_pirate.png",
+   "wearers": 8
+  },
+  "Male / Eyes / 3D Glasses": {
+   "file": "eyes_3D.png",
+   "wearers": 270
+  },
+  "Male / Eyes / Aviators": {
+   "file": "eyes_aviators.png",
+   "wearers": 243
+  },
+  "Male / Eyes / Blue": {
+   "file": "eyes_teal.png",
+   "wearers": 1993
+  },
+  "Male / Eyes / Blue Beams": {
+   "file": "eyes_laserangle_teal.png",
+   "wearers": 46
+  },
+  "Male / Eyes / Brown": {
+   "file": "eyes_brown.png",
+   "wearers": 2633
+  },
+  "Male / Eyes / Cosmo Shades": {
+   "file": "eyes_cosomo.png",
+   "wearers": 122
+  },
+  "Male / Eyes / Cyborg": {
+   "file": "eyes_cyborg.png",
+   "wearers": 92
+  },
+  "Male / Eyes / Diamond": {
+   "file": "eyes_diamond.png",
+   "wearers": 1
+  },
+  "Male / Eyes / Eye Patch": {
+   "file": "eyes_patch.png",
+   "wearers": 48
+  },
+  "Male / Eyes / Fire": {
+   "file": "eyes_fire.png",
+   "wearers": 9
+  },
+  "Male / Eyes / Gaming Control": {
+   "file": "eyes_gamercontrol.png",
+   "wearers": 95
+  },
+  "Male / Eyes / Gold": {
+   "file": "eyes_gold.png",
+   "wearers": 10
+  },
+  "Male / Eyes / Gold Aviators": {
+   "file": "eyes_aviators_gold 1.png",
+   "wearers": 11
+  },
+  "Male / Eyes / Green Retro": {
+   "file": "eyes_retro_green.png",
+   "wearers": 84
+  },
+  "Male / Eyes / High": {
+   "file": "eyes_high.png",
+   "wearers": 258
+  },
+  "Male / Eyes / Laser Eyes": {
+   "file": "eyes_laser_red.png",
+   "wearers": 59
+  },
+  "Male / Eyes / Max Pain": {
+   "file": "eyes_maxpain.png",
+   "wearers": 94
+  },
+  "Male / Eyes / Mogged": {
+   "file": "eyes_mogged.png",
+   "wearers": 33
+  },
+  "Male / Eyes / Nerd Glasses": {
+   "file": "eyes_nerd.png",
+   "wearers": 113
+  },
+  "Male / Eyes / Noggles": {
+   "file": "eyes_noggles.png",
+   "wearers": 65
+  },
+  "Male / Eyes / Pink": {
+   "file": "eyes_pink.png",
+   "wearers": 629
+  },
+  "Male / Eyes / Poker Face": {
+   "file": "eyes_poker_glasses.png",
+   "wearers": 259
+  },
+  "Male / Eyes / Purple Retro": {
+   "file": "eyes_retro_purple.png",
+   "wearers": 112
+  },
+  "Male / Eyes / Red": {
+   "file": "eyes_red.png",
+   "wearers": 824
+  },
+  "Male / Eyes / Right Click": {
+   "file": "eyes_right_click.png",
+   "wearers": 129
+  },
+  "Male / Eyes / Scar": {
+   "file": "eyes_scar.png",
+   "wearers": 11
+  },
+  "Male / Eyes / Shades": {
+   "file": "eyes_raybans.png",
+   "wearers": 341
+  },
+  "Male / Eyes / Tired": {
+   "file": "eyes_tired.png",
+   "wearers": 252
+  },
+  "Male / Eyes / VR": {
+   "file": "eyes_vr_headset.png",
+   "wearers": 43
+  },
+  "Male / Eyes / Welding Goggles": {
+   "file": "eyes_weld_goggles.png",
+   "wearers": 53
+  },
+  "Male / Eyes / XCOPY": {
+   "file": "eyes_xcopy.png",
+   "wearers": 63
+  },
+  "Male / Head / AI Helmet": {
+   "file": "head_ai_helmet.png",
+   "wearers": 8
+  },
+  "Male / Head / Afro": {
+   "file": "head_afro_brown.png",
+   "wearers": 151
+  },
+  "Male / Head / Afro Comb": {
+   "file": "head_afro_brown_comb.png",
+   "wearers": 28
+  },
+  "Male / Head / Army Helmet": {
+   "file": "head_army.png",
+   "wearers": 84
+  },
+  "Male / Head / Astronaut Helmet": {
+   "file": "head_space.png",
+   "wearers": 38
+  },
+  "Male / Head / Black BW Cap": {
+   "file": "head_bw_cap_black.png",
+   "wearers": 161
+  },
+  "Male / Head / Black Blowout": {
+   "file": "head_blowout_black.png",
+   "wearers": 286
+  },
+  "Male / Head / Black Cap": {
+   "file": "head_cap_black.png",
+   "wearers": 156
+  },
+  "Male / Head / Black Cornrows": {
+   "file": "head_cornrows_black.png",
+   "wearers": 279
+  },
+  "Male / Head / Black Crewcut": {
+   "file": "head_black_crewcut.png",
+   "wearers": 218
+  },
+  "Male / Head / Black Headphones": {
+   "file": "head_headphones_black.png",
+   "wearers": 181
+  },
+  "Male / Head / Black Mohawk": {
+   "file": "head_black_mohawk.png",
+   "wearers": 130
+  },
+  "Male / Head / Black Mullet": {
+   "file": "head_mullet_black.png",
+   "wearers": 120
+  },
+  "Male / Head / Blonde Blowout": {
+   "file": "head_blowout_blonde.png",
+   "wearers": 208
+  },
+  "Male / Head / Blonde Cornrows": {
+   "file": "head_cornrows_blonde.png",
+   "wearers": 259
+  },
+  "Male / Head / Blonde Crewcut": {
+   "file": "head_blonde_crewcut.png",
+   "wearers": 208
+  },
+  "Male / Head / Blonde Mohawk": {
+   "file": "head_blonde_mohawk.png",
+   "wearers": 210
+  },
+  "Male / Head / Blonde Mullet": {
+   "file": "head_mullet_blonde.png",
+   "wearers": 204
+  },
+  "Male / Head / Blonde Undercut": {
+   "file": "head_undercut_blonde.png",
+   "wearers": 260
+  },
+  "Male / Head / Blue Mullet": {
+   "file": "head_mullet_blue.png",
+   "wearers": 138
+  },
+  "Male / Head / Brown Blowout": {
+   "file": "head_blowout_brown.png",
+   "wearers": 268
+  },
+  "Male / Head / Brown Crewcut": {
+   "file": "head_brown_crewcut.png",
+   "wearers": 209
+  },
+  "Male / Head / Brown Mohawk": {
+   "file": "head_brown_mohawk.png",
+   "wearers": 124
+  },
+  "Male / Head / Brown Mullet": {
+   "file": "head_mullet_brown.png",
+   "wearers": 154
+  },
+  "Male / Head / Brown Undercut": {
+   "file": "head_undercut_brown.png",
+   "wearers": 249
+  },
+  "Male / Head / Bunny Ears": {
+   "file": "head_bunny.png",
+   "wearers": 59
+  },
+  "Male / Head / Captains Hat": {
+   "file": "head_captain.png",
+   "wearers": 134
+  },
+  "Male / Head / Chef Hat": {
+   "file": "head_chef.png",
+   "wearers": 92
+  },
+  "Male / Head / Combover": {
+   "file": "derived/head_combover.png",
+   "wearers": 82
+  },
+  "Male / Head / Cowboy Hat": {
+   "file": "head_cowboy_brown.png",
+   "wearers": 65
+  },
+  "Male / Head / Crazy Purple": {
+   "file": "head_purple.png",
+   "wearers": 79
+  },
+  "Male / Head / Crazy Red": {
+   "file": "head_crazy_red.png",
+   "wearers": 142
+  },
+  "Male / Head / Crown": {
+   "file": "head_crown_gold.png",
+   "wearers": 8
+  },
+  "Male / Head / Devil Horns": {
+   "file": "head_devil_horns.png",
+   "wearers": 86
+  },
+  "Male / Head / Diamond Crown": {
+   "file": "head_crown_diamond.png",
+   "wearers": 1
+  },
+  "Male / Head / Fireman Helmet": {
+   "file": "head_fireman.png",
+   "wearers": 83
+  },
+  "Male / Head / Forrest Beanie": {
+   "file": "head_beanie_forrest.png",
+   "wearers": 27
+  },
+  "Male / Head / Ghutra": {
+   "file": "head_ghutra.png",
+   "wearers": 89
+  },
+  "Male / Head / Ginger Blowout": {
+   "file": "head_blowout_ginger.png",
+   "wearers": 282
+  },
+  "Male / Head / Ginger Crewcut": {
+   "file": "head_ginger_crewcut.png",
+   "wearers": 180
+  },
+  "Male / Head / Ginger Mohawk": {
+   "file": "head_ginger_mohawk.png",
+   "wearers": 109
+  },
+  "Male / Head / Ginger Mullet": {
+   "file": "head_mullet_ginger.png",
+   "wearers": 139
+  },
+  "Male / Head / Gold Headphones": {
+   "file": "head_headphones_gold.png",
+   "wearers": 10
+  },
+  "Male / Head / Gold Mohawk": {
+   "file": "head_gold_mohawk.png",
+   "wearers": 8
+  },
+  "Male / Head / Green Clown": {
+   "file": "head_clown.png",
+   "wearers": 70
+  },
+  "Male / Head / Grey Undercut": {
+   "file": "head_undercut_grey.png",
+   "wearers": 261
+  },
+  "Male / Head / Halo": {
+   "file": "head_halo.png",
+   "wearers": 10
+  },
+  "Male / Head / Hard Hat": {
+   "file": "head_hardhat.png",
+   "wearers": 79
+  },
+  "Male / Head / Long Dreadlocks": {
+   "file": "head_dreads_long.png",
+   "wearers": 210
+  },
+  "Male / Head / Motorbike Helmet": {
+   "file": "head_bike_helmet.png",
+   "wearers": 59
+  },
+  "Male / Head / On Fire": {
+   "file": "head_fire.png",
+   "wearers": 21
+  },
+  "Male / Head / Orange Beanie": {
+   "file": "head_beanie_tangerine.png",
+   "wearers": 36
+  },
+  "Male / Head / Pink Bandana": {
+   "file": "head_bandana_pink.png",
+   "wearers": 120
+  },
+  "Male / Head / Pink Beanie": {
+   "file": "head_beanie_peach.png",
+   "wearers": 44
+  },
+  "Male / Head / Pink Crewcut": {
+   "file": "head_pink_crewcut.png",
+   "wearers": 187
+  },
+  "Male / Head / Pirate Hat": {
+   "file": "head_pirate.png",
+   "wearers": 80
+  },
+  "Male / Head / Porkpie Hat": {
+   "file": "head_heisenberg.png",
+   "wearers": 170
+  },
+  "Male / Head / Purple Bandana": {
+   "file": "head_bandana_purple.png",
+   "wearers": 127
+  },
+  "Male / Head / Purple Mullet": {
+   "file": "head_mullet_purple.png",
+   "wearers": 171
+  },
+  "Male / Head / Rainbow Mohawk": {
+   "file": "head_rainbow_mohawk.png",
+   "wearers": 4
+  },
+  "Male / Head / Red BW Cap": {
+   "file": "head_bw_cap_red.png",
+   "wearers": 176
+  },
+  "Male / Head / Red Headphones": {
+   "file": "head_headphones_red.png",
+   "wearers": 129
+  },
+  "Male / Head / Red Visor": {
+   "file": "head_maccas.png",
+   "wearers": 46
+  },
+  "Male / Head / Short Dreadlocks": {
+   "file": "head_dreads_short.png",
+   "wearers": 175
+  },
+  "Male / Head / Sombrero": {
+   "file": "head_sumbrero.png",
+   "wearers": 90
+  },
+  "Male / Head / Spinner Hat": {
+   "file": "head_hat_spinner.png",
+   "wearers": 44
+  },
+  "Male / Head / Squiggle": {
+   "file": "head_squiggle.png",
+   "wearers": 30
+  },
+  "Male / Head / Viking Helmet": {
+   "file": "head_viking.png",
+   "wearers": 72
+  },
+  "Male / Head / White BW Cap": {
+   "file": "head_bw_cap_white.png",
+   "wearers": 169
+  },
+  "Male / Head / Wizard Hat": {
+   "file": "head_wizard.png",
+   "wearers": 50
+  },
+  "Male / Mouth / Angry": {
+   "file": "mouth_angry.png",
+   "wearers": 830
+  },
+  "Male / Mouth / Banana": {
+   "file": "mouth_banana.png",
+   "wearers": 32
+  },
+  "Male / Mouth / Brown Beard": {
+   "file": "mouth_beard_brown.png",
+   "wearers": 276
+  },
+  "Male / Mouth / Chopper": {
+   "file": "mouth_chopper.png",
+   "wearers": 198
+  },
+  "Male / Mouth / Cigar": {
+   "file": "mouth_cigar.png",
+   "wearers": 91
+  },
+  "Male / Mouth / Coin": {
+   "file": "mouth_coin_eth.png",
+   "wearers": 9
+  },
+  "Male / Mouth / Diamond Tooth": {
+   "file": "mouth_diamond_tooth.png",
+   "wearers": 2
+  },
+  "Male / Mouth / Focused": {
+   "file": "mouth_focused.png",
+   "wearers": 885
+  },
+  "Male / Mouth / Gold Tooth": {
+   "file": "mouth_gold_tooth.png",
+   "wearers": 2
+  },
+  "Male / Mouth / Grey Beard": {
+   "file": "mouth_beard_grey.png",
+   "wearers": 10
+  },
+  "Male / Mouth / Grills": {
+   "file": "mouth_grills.png",
+   "wearers": 10
+  },
+  "Male / Mouth / Grin": {
+   "file": "mouth_smile.png",
+   "wearers": 922
+  },
+  "Male / Mouth / Happy": {
+   "file": "mouth_happy.png",
+   "wearers": 720
+  },
+  "Male / Mouth / Joint": {
+   "file": "mouth_joint.png",
+   "wearers": 95
+  },
+  "Male / Mouth / Large Beard": {
+   "file": "mouth_beard_long.png",
+   "wearers": 382
+  },
+  "Male / Mouth / Laugh": {
+   "file": "mouth_laugh.png",
+   "wearers": 546
+  },
+  "Male / Mouth / Missing Teeth": {
+   "file": "mouth_missing_teeth.png",
+   "wearers": 460
+  },
+  "Male / Mouth / Napoleon": {
+   "file": "mouth_napoleon.png",
+   "wearers": 275
+  },
+  "Male / Mouth / Pipe": {
+   "file": "mouth_pipe.png",
+   "wearers": 94
+  },
+  "Male / Mouth / Pizza": {
+   "file": "mouth_pizza.png",
+   "wearers": 77
+  },
+  "Male / Mouth / Relaxed": {
+   "file": "mouth_relaxed.png",
+   "wearers": 924
+  },
+  "Male / Mouth / Sad": {
+   "file": "mouth_sad.png",
+   "wearers": 726
+  },
+  "Male / Mouth / Thick Stache": {
+   "file": "mouth_selleck.png",
+   "wearers": 290
+  },
+  "Male / Mouth / Tongue Out": {
+   "file": "mouth_tongue.png",
+   "wearers": 445
+  },
+  "Male / Mouth / Toothpick": {
+   "file": "mouth_toothpick.png",
+   "wearers": 83
+  },
+  "Male / Mouth / Vampire": {
+   "file": "mouth_vampire.png",
+   "wearers": 517
+  },
+  "Male / Mouth / Vape": {
+   "file": "mouth_vape.png",
+   "wearers": 94
+  }
+ },
+ "equivalent_ties": {
+  "Female / Head / Blonde Mohawk": {
+   "chosen": "head_blonde_mohawk.png",
+   "equivalent": [
+    "head_blonde_mohawk 1.png"
+   ]
+  },
+  "Female / Head / Blonde Mullet": {
+   "chosen": "head_mullet_blonde.png",
+   "equivalent": [
+    "head_mullet_blonde 1.png"
+   ]
+  },
+  "Male / Head / Blonde Mohawk": {
+   "chosen": "head_blonde_mohawk.png",
+   "equivalent": [
+    "head_blonde_mohawk 1.png"
+   ]
+  },
+  "Male / Head / Blonde Mullet": {
+   "chosen": "head_mullet_blonde.png",
+   "equivalent": [
+    "head_mullet_blonde 1.png"
+   ]
+  }
+ },
+ "derived": {
+  "derived/head_combover.png": {
+   "byte_identical_to": "head_trump.png",
+   "raw_rgba_sha256": "e65aa9a055b38bc65d0ac51c34c5a53ebec6e84a104ec78efa8f9fe57ffb0f72"
+  }
+ },
+ "never_bind": [
+  "head_trump.png"
+ ],
+ "bound_files": [
+  "accessory_american_flag.png",
+  "accessory_angel_wings.png",
+  "accessory_anonymous.png",
+  "accessory_basketball 1.png",
+  "accessory_beeplebot.png",
+  "accessory_bird.png",
+  "accessory_bird_gold.png",
+  "accessory_boombox.png",
+  "accessory_boombox_gold.png",
+  "accessory_cat.png",
+  "accessory_cat_gold.png",
+  "accessory_clock.png",
+  "accessory_cobra.png",
+  "accessory_cobra_gold.png",
+  "accessory_dollar_bills.png",
+  "accessory_drone.png",
+  "accessory_eth_chain.png",
+  "accessory_flame_thrower.png",
+  "accessory_frog.png",
+  "accessory_gold_coins.png",
+  "accessory_katana.png",
+  "accessory_katana_flame.png",
+  "accessory_laptop.png",
+  "accessory_lock.png",
+  "accessory_machine_gun.png",
+  "accessory_martini.png",
+  "accessory_moneygun.png",
+  "accessory_poker_chips.png",
+  "accessory_popcorn.png",
+  "accessory_shotgun.png",
+  "accessory_spraycan.png",
+  "accessory_unicorns.png",
+  "accessory_whisky.png",
+  "accessory_wings_fem.png",
+  "body_albino.png",
+  "body_alien.png",
+  "body_ape.png",
+  "body_coffee.png",
+  "body_cyborg2.png",
+  "body_gold.png",
+  "body_latte.png",
+  "body_mocha.png",
+  "body_orange.png",
+  "body_pink.png",
+  "body_skeleton.png",
+  "body_unobtainium.png",
+  "body_zombie.png",
+  "clothing_23_jersey.png",
+  "clothing_33_jersey.png",
+  "clothing_8_jersey.png",
+  "clothing_ammo.png",
+  "clothing_bathrobe_purple.png",
+  "clothing_bathrobe_white.png",
+  "clothing_beepleshirt.png",
+  "clothing_black_t_male.png",
+  "clothing_boxing_robe.png",
+  "clothing_camono.png",
+  "clothing_cape_gold.png",
+  "clothing_cape_purple.png",
+  "clothing_cape_red.png",
+  "clothing_chef.png",
+  "clothing_cowboy.png",
+  "clothing_fireman.png",
+  "clothing_hawaiian.png",
+  "clothing_hoodie_croc.png",
+  "clothing_hoodie_tiger.png",
+  "clothing_hoodie_whale.png",
+  "clothing_hoodieup_black.png",
+  "clothing_hoodieup_gold.png",
+  "clothing_jacket_gold.png",
+  "clothing_jacket_leather.png",
+  "clothing_jacket_punk.png",
+  "clothing_jacket_punk2.png",
+  "clothing_magenta_t_male.png",
+  "clothing_paramedic.png",
+  "clothing_pinstripe_suit_male.png",
+  "clothing_police_ny.png",
+  "clothing_puffa_hurst.png",
+  "clothing_shirt_open.png",
+  "clothing_spacesuit.png",
+  "clothing_suit_male.png",
+  "clothing_suit_wolf.png",
+  "clothing_sweater_blue.png",
+  "clothing_sweater_green.png",
+  "clothing_sweater_white.png",
+  "clothing_sweater_yellow.png",
+  "clothing_tahirt_jail.png",
+  "clothing_tank_black.png",
+  "clothing_tank_peach.png",
+  "clothing_tank_white.png",
+  "clothing_tattoos.png",
+  "clothing_teal_t_male.png",
+  "clothing_tshirt_bunnyt.png",
+  "clothing_tshirt_doomed.png",
+  "clothing_tshirt_doomed_mono.png",
+  "clothing_tshirt_doomed_red.png",
+  "clothing_tshirt_fidenza.png",
+  "clothing_tshirt_jpeg.png",
+  "clothing_tshirt_moodeng.png",
+  "clothing_tshirt_ripped.png",
+  "clothing_tshirt_vitalik.png",
+  "clothing_white_t_male.png",
+  "derived/head_combover.png",
+  "earring_crucifix.png",
+  "earring_diamond.png",
+  "earring_gold.png",
+  "earring_gold_hoop.png",
+  "earring_pearl.png",
+  "earring_pirate.png",
+  "eyes_3D.png",
+  "eyes_aviators.png",
+  "eyes_aviators_gold 1.png",
+  "eyes_brown.png",
+  "eyes_cosomo.png",
+  "eyes_cyborg.png",
+  "eyes_diamond.png",
+  "eyes_fire.png",
+  "eyes_gamercontrol.png",
+  "eyes_gold.png",
+  "eyes_high.png",
+  "eyes_laser_red.png",
+  "eyes_laserangle_teal.png",
+  "eyes_maxpain.png",
+  "eyes_mogged.png",
+  "eyes_nerd.png",
+  "eyes_noggles.png",
+  "eyes_patch.png",
+  "eyes_pink.png",
+  "eyes_poker_glasses.png",
+  "eyes_raybans.png",
+  "eyes_red.png",
+  "eyes_retro_green.png",
+  "eyes_retro_purple.png",
+  "eyes_right_click.png",
+  "eyes_scar.png",
+  "eyes_teal.png",
+  "eyes_tired.png",
+  "eyes_vr_headset.png",
+  "eyes_weld_goggles.png",
+  "eyes_xcopy.png",
+  "female_body_albino.png",
+  "female_body_alien.png",
+  "female_body_ape.png",
+  "female_body_coffee.png",
+  "female_body_cyborg.png",
+  "female_body_gold.png",
+  "female_body_latte.png",
+  "female_body_mocha.png",
+  "female_body_orange.png",
+  "female_body_pink.png",
+  "female_body_skeleton.png",
+  "female_body_unobtainium.png",
+  "female_body_zombie.png",
+  "female_clothing_baywatch.png",
+  "female_clothing_boxing.png",
+  "female_clothing_bra_black.png",
+  "female_clothing_bra_red.png",
+  "female_clothing_cape_gold.png",
+  "female_clothing_cape_pink.png",
+  "female_clothing_cowboy.png",
+  "female_clothing_croc_hoodie.png",
+  "female_clothing_doomed_female.png",
+  "female_clothing_doomed_red_crop.png",
+  "female_clothing_dress_black.png",
+  "female_clothing_dress_flowers.png",
+  "female_clothing_dress_green.png",
+  "female_clothing_dress_pink.png",
+  "female_clothing_dress_polkadot.png",
+  "female_clothing_firefighter.png",
+  "female_clothing_flag.png",
+  "female_clothing_hawaiin.png",
+  "female_clothing_jail_stripes_fem.png",
+  "female_clothing_komono.png",
+  "female_clothing_paramedic.png",
+  "female_clothing_police.png",
+  "female_clothing_punk.png",
+  "female_clothing_punk2.png",
+  "female_clothing_robe_pink.png",
+  "female_clothing_robe_white.png",
+  "female_clothing_sportsbra_blue.png",
+  "female_clothing_sportsbra_red.png",
+  "female_clothing_suit.png",
+  "female_clothing_tattoos.png",
+  "female_clothing_tiger_hoodie.png",
+  "female_clothing_tshirt_black.png",
+  "female_clothing_tshirt_peach.png",
+  "female_clothing_tshirt_stripe.png",
+  "female_clothing_tshirt_white.png",
+  "female_clothing_whale_hoodie.png",
+  "female_hair_bow_pink.png",
+  "female_hair_bow_red.png",
+  "female_hair_karen_blonde.png",
+  "female_hair_karen_brown.png",
+  "female_hair_long_black.png",
+  "female_hair_long_blonde.png",
+  "female_hair_long_brown.png",
+  "female_hair_long_purple.png",
+  "female_hair_pigtails_blonde.png",
+  "female_hair_pigtails_blue.png",
+  "female_hair_pigtails_brown.png",
+  "female_hair_pigtails_ginger.png",
+  "female_hair_side_blonde.png",
+  "female_hair_side_brown.png",
+  "female_hair_side_pink.png",
+  "female_hair_side_red.png",
+  "female_head_beanie_black.png",
+  "female_head_beanie_orange.png",
+  "female_head_beret.png",
+  "female_head_cap_yellow.png",
+  "female_head_capback_black.png",
+  "female_head_crazy.png",
+  "female_head_monroe.png",
+  "female_head_tiara_blue.png",
+  "female_head_tiara_purple.png",
+  "female_mouth_angry.png",
+  "female_mouth_banana.png",
+  "female_mouth_braces.png",
+  "female_mouth_cigar.png",
+  "female_mouth_diamond.png",
+  "female_mouth_gold_tooth.png",
+  "female_mouth_goofy.png",
+  "female_mouth_goth.png",
+  "female_mouth_grills.png",
+  "female_mouth_joint.png",
+  "female_mouth_missing_teeth.png",
+  "female_mouth_pink.png",
+  "female_mouth_pipe.png",
+  "female_mouth_pizza.png",
+  "female_mouth_relaxed.png",
+  "female_mouth_sad.png",
+  "female_mouth_smile.png",
+  "female_mouth_tongue.png",
+  "female_mouth_toothpick.png",
+  "female_mouth_vampire.png",
+  "female_mouth_vape.png",
+  "head_afro_brown.png",
+  "head_afro_brown_comb.png",
+  "head_ai_helmet.png",
+  "head_army.png",
+  "head_bandana_pink.png",
+  "head_bandana_purple.png",
+  "head_beanie_forrest.png",
+  "head_beanie_peach.png",
+  "head_beanie_tangerine.png",
+  "head_bike_helmet.png",
+  "head_black_crewcut.png",
+  "head_black_mohawk.png",
+  "head_blonde_crewcut.png",
+  "head_blonde_mohawk.png",
+  "head_blowout_black.png",
+  "head_blowout_blonde.png",
+  "head_blowout_brown.png",
+  "head_blowout_ginger.png",
+  "head_brown_crewcut.png",
+  "head_brown_mohawk.png",
+  "head_bunny.png",
+  "head_bw_cap_black.png",
+  "head_bw_cap_red.png",
+  "head_bw_cap_white.png",
+  "head_cap_black.png",
+  "head_captain.png",
+  "head_chef.png",
+  "head_clown.png",
+  "head_cornrows_black.png",
+  "head_cornrows_blonde.png",
+  "head_cowboy_brown.png",
+  "head_crazy_red.png",
+  "head_crown_diamond.png",
+  "head_crown_gold.png",
+  "head_devil_horns.png",
+  "head_dreads_long.png",
+  "head_dreads_short.png",
+  "head_fire.png",
+  "head_fireman.png",
+  "head_ghutra.png",
+  "head_ginger_crewcut.png",
+  "head_ginger_mohawk.png",
+  "head_gold_mohawk.png",
+  "head_halo.png",
+  "head_hardhat.png",
+  "head_hat_spinner.png",
+  "head_headphones_black.png",
+  "head_headphones_gold.png",
+  "head_headphones_red.png",
+  "head_heisenberg.png",
+  "head_maccas.png",
+  "head_mullet_black.png",
+  "head_mullet_blonde.png",
+  "head_mullet_blue.png",
+  "head_mullet_brown.png",
+  "head_mullet_ginger.png",
+  "head_mullet_purple.png",
+  "head_pink_crewcut.png",
+  "head_pirate.png",
+  "head_purple.png",
+  "head_rainbow_mohawk.png",
+  "head_space.png",
+  "head_squiggle.png",
+  "head_sumbrero.png",
+  "head_undercut_blonde.png",
+  "head_undercut_brown.png",
+  "head_undercut_grey.png",
+  "head_viking.png",
+  "head_wizard.png",
+  "mouth_angry.png",
+  "mouth_banana.png",
+  "mouth_beard_brown.png",
+  "mouth_beard_grey.png",
+  "mouth_beard_long.png",
+  "mouth_chopper.png",
+  "mouth_cigar.png",
+  "mouth_coin_eth.png",
+  "mouth_diamond_tooth.png",
+  "mouth_focused.png",
+  "mouth_gold_tooth.png",
+  "mouth_grills.png",
+  "mouth_happy.png",
+  "mouth_joint.png",
+  "mouth_laugh.png",
+  "mouth_missing_teeth.png",
+  "mouth_napoleon.png",
+  "mouth_pipe.png",
+  "mouth_pizza.png",
+  "mouth_relaxed.png",
+  "mouth_sad.png",
+  "mouth_selleck.png",
+  "mouth_smile.png",
+  "mouth_tongue.png",
+  "mouth_toothpick.png",
+  "mouth_vampire.png",
+  "mouth_vape.png"
+ ],
+ "unused_files": [
+  "accessory_basketball.png",
+  "accessory_doge.png",
+  "accessory_eagle.png",
+  "clothing_baseball_dodgers.png",
+  "clothing_baseball_yankees.png",
+  "clothing_tshirt_banana.png",
+  "clothing_tshirt_bubble.png",
+  "clothing_tshirt_butcher.png",
+  "clothing_tshirt_eth.png",
+  "clothing_tshirt_ringers.png",
+  "clothing_tshirt_squiggle.png",
+  "eyes_aviators_gold.png",
+  "eyes_blue.png",
+  "eyes_laser_teal.png",
+  "eyes_pokerchips.png",
+  "eyes_retro_pink.png",
+  "female_clothing_doomed_mono_crop.png",
+  "female_clothing_hoodiefem_black.png",
+  "female_mouth_focused.png",
+  "female_mouth_happy.png",
+  "head_bandana_gold.png",
+  "head_birthday_hat.png",
+  "head_blonde_mohawk 1.png",
+  "head_mullet_blonde 1.png",
+  "head_trump.png",
+  "mouth_braces.png"
+ ],
+ "semi_alpha_rounding": {
+  "note": "frozen renders mix two .5-tie rounding regimes on the 50%-alpha mouth pixels; per-punk regime in semi-rounding.json; on-chain data carries (0,0,0,128) verbatim",
+  "F": 1858,
+  "C": 715,
+  "either": 7427
+ }
+}

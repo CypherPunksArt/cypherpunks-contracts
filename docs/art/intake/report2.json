@@ -1,0 +1,3458 @@
+{
+ "subfolder_pngs": {
+  "count": 49,
+  "not_at_top_level": [
+   "Boxing_Robe.png",
+   "Screenshot_2025-10-13_at_2.41.32_PM.png",
+   "Screenshot_2025-12-04_at_8.16.55_PM.png",
+   "Screenshot_2026-01-22_at_12.09.01_pm.png",
+   "Screenshot_2026-01-22_at_12.16.11_PM.png",
+   "image 1.png",
+   "image 2.png",
+   "image.png",
+   "images.png"
+  ]
+ },
+ "step1": {
+  "matched_exact": 162,
+  "matched_via_near_miss": 186,
+  "matched_cross_gender": 11,
+  "unmatched_metadata_values": [
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Frog",
+    "punks": 1
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Gold Boombox",
+    "punks": 10
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Gold Boombox",
+    "punks": 1
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Punk Necklace",
+    "punks": 9
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Punk Necklace",
+    "punks": 1
+   },
+   {
+    "gender": "Male",
+    "category": "Body",
+    "value": "Bones",
+    "punks": 238
+   },
+   {
+    "gender": "Female",
+    "category": "Body",
+    "value": "Bones",
+    "punks": 26
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "#24 Jersey",
+    "punks": 46
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Gold Cape",
+    "punks": 24
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Gold Cape",
+    "punks": 4
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Pink Cape",
+    "punks": 5
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Polka Dot Dress",
+    "punks": 25
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Prison Stripes",
+    "punks": 98
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Prison Stripes",
+    "punks": 2
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Punk Jacket 1",
+    "punks": 124
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Punk Jacket 3",
+    "punks": 21
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Punk Jacket 4",
+    "punks": 10
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Purple Cape",
+    "punks": 61
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Red Cape",
+    "punks": 123
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Spot Puffer",
+    "punks": 32
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Spot Puffer",
+    "punks": 9
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Wallstreet Suit",
+    "punks": 115
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Blue Beams",
+    "punks": 46
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Blue Beams",
+    "punks": 3
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Classic Shades",
+    "punks": 5
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Cosmo Shades",
+    "punks": 122
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Cosmo Shades",
+    "punks": 3
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Laser Eyes",
+    "punks": 59
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Laser Eyes",
+    "punks": 10
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "On Fire",
+    "punks": 6
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "On Fire",
+    "punks": 5
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Right Click",
+    "punks": 127
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Right Click",
+    "punks": 9
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Right Click Shades",
+    "punks": 2
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Shades",
+    "punks": 336
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Shades",
+    "punks": 46
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Black BW Cap",
+    "punks": 161
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Black BW Cap",
+    "punks": 25
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blonde 50s",
+    "punks": 16
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blue Tiara",
+    "punks": 6
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Brunette Long",
+    "punks": 47
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Brunette Sidehair",
+    "punks": 56
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Combover",
+    "punks": 82
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Crazy 80s",
+    "punks": 8
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Crazy Purple",
+    "punks": 79
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Forrest Beanie",
+    "punks": 27
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Navy Beanie",
+    "punks": 20
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Orange Cap",
+    "punks": 28
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Pink Beanie",
+    "punks": 43
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Porkpie Hat",
+    "punks": 170
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Purple Tiara",
+    "punks": 4
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Red BW Cap",
+    "punks": 176
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Red Visor",
+    "punks": 46
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Red Visor",
+    "punks": 19
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "White BW Cap",
+    "punks": 169
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Brown Beard",
+    "punks": 276
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Goofy",
+    "punks": 25
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Grey Beard",
+    "punks": 10
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Napoleon",
+    "punks": 275
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Thick Stache",
+    "punks": 290
+   }
+  ],
+  "unmatched_csv_rows": [
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Mamba Jersey'",
+    "file": "clothing_jersey_lakers.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Boys In Blue Jersey'",
+    "file": "clothing_baseball_dodgers.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Bronx Jersey'",
+    "file": "clothing_baseball_yankees.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Punk Jacket'",
+    "file": "clothing_jacket_punk.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Tangerine Beanie'",
+    "file": "head_beanie_tangerine.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Forrest Forrest'",
+    "file": "head_beanie_forrest.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Gold Bandana '",
+    "file": "head_bandana_gold.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Trump'",
+    "file": "head_trump.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'BW Cap Black '",
+    "file": "head_bw_cap_black.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'BW Cap White '",
+    "file": "head_bw_cap_white.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'BW Cap Red '",
+    "file": "head_bw_cap_red.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Teal'",
+    "file": "eyes_teal.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Ray Bans'",
+    "file": "eyes_raybans.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Pink Retro '",
+    "file": "eyes_retro_pink.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Red Laser '",
+    "file": "eyes_laser_red.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "csv_name": "'Smile '",
+    "file": "mouth_smile.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "csv_name": "'Braces '",
+    "file": "mouth_braces.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "csv_name": "'Selleck '",
+    "file": "mouth_selleck.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "csv_name": "'Napolean '",
+    "file": "mouth_napoleon.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Wolf of Wallstreet Suit '",
+    "file": "clothing_suit_wolf.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "csv_name": "'Full Beard Brown'",
+    "file": "mouth_beard_brown.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "csv_name": "'Full Beard Grey'",
+    "file": "mouth_beard_grey.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Poker Chips'",
+    "file": "eyes_pokerchips.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Birthday Hat'",
+    "file": "head_birthday_hat.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Cape Red '",
+    "file": "clothing_cape_red.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Cape Purple '",
+    "file": "clothing_cape_purple.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Cape Gold'",
+    "file": "clothing_cape_gold.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Body",
+    "csv_name": "'Skeleton'",
+    "file": "body_skeleton.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'ETH T '",
+    "file": "clothing_tshirt_eth.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "csv_name": "'CypherPunk Necklace '",
+    "file": "accessory_eth_chain.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Maccas Hat '",
+    "file": "head_maccas.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "csv_name": "'Boombox Gold'",
+    "file": "accessory_boombox_gold.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Purple '",
+    "file": "head_purple.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Chromie Squiggle T'",
+    "file": "clothing_tshirt_squiggle.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Jack Butcher T'",
+    "file": "clothing_tshirt_butcher.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Cosomo Shades '",
+    "file": "eyes_cosomo.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Bubble T'",
+    "file": "clothing_tshirt_bubble.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Right click and save shades '",
+    "file": "eyes_right_click.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "csv_name": "'Blue Beam eyes '",
+    "file": "eyes_laserangle_teal.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "csv_name": "'Hiesenburg Hat '",
+    "file": "head_heisenberg.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Banana Zone T'",
+    "file": "clothing_tshirt_banana.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Ringers T'",
+    "file": "clothing_tshirt_ringers.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Damien Hirst Puffer'",
+    "file": "clothing_puffa_hurst.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "csv_name": "'Pet Pepe '",
+    "file": "accessory_pepe.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "csv_name": "'Pet Doge '",
+    "file": "accessory_doge.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "csv_name": "'Pet Eagle '",
+    "file": "accessory_eagle.png"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "csv_name": "'Jail Strips '",
+    "file": "clothing_tahirt_jail.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Ray Bans'",
+    "file": "eyes_raybans.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Pink Retro '",
+    "file": "eyes_retro_pink.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Teal Laser '",
+    "file": "eyes_laser_teal.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Red Laser '",
+    "file": "eyes_laser_red.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Teal'",
+    "file": "eyes_teal.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "csv_name": "'Boombox Gold'",
+    "file": "accessory_boombox_gold.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "csv_name": "'Laugh '",
+    "file": "female_mouth_goofy.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "csv_name": "'CypherPunks Necklace '",
+    "file": "accessory_eth_chain.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Poker Chips'",
+    "file": "eyes_pokerchips.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Maccas Hat '",
+    "file": "head_maccas.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Blue Beam eyes '",
+    "file": "eyes_laserangle_teal.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Right click and save shades '",
+    "file": "eyes_right_click.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "csv_name": "'Cosomo Shades '",
+    "file": "eyes_cosomo.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Brown Sidehair'",
+    "file": "female_hair_side_brown.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Black Hoodie'",
+    "file": "female_clothing_hoodiefem_black.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Yellow Cap '",
+    "file": "female_head_cap_yellow.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Cape Pink'",
+    "file": "female_clothing_cape_pink.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Brown Long'",
+    "file": "female_hair_long_brown.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Black Backwards Cap '",
+    "file": "female_head_capback_black.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Cape Gold'",
+    "file": "female_clothing_cape_gold.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Punk Jacket'",
+    "file": "female_clothing_punk.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Damien Hirst Puffer'",
+    "file": "clothing_puffa_hurst.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Body",
+    "csv_name": "'Skeleton '",
+    "file": "female_body_skeleton.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Black Beanie '",
+    "file": "female_head_beanie_black.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Punk Jacket 2 '",
+    "file": "female_clothing_punk2.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Tiara Purple Gem '",
+    "file": "female_head_tiara_purple.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Tiara Blue Gem '",
+    "file": "female_head_tiara_blue.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Crazy Hair '",
+    "file": "female_head_crazy.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "csv_name": "'Monroe '",
+    "file": "female_head_monroe.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Dress (new pattern) '",
+    "file": "female_clothing_dress_polkadot.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Jail Strips '",
+    "file": "female_clothing_jail_stripes_fem.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Doomed Crop Mono'",
+    "file": "female_clothing_doomed_mono_crop.png"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "csv_name": "'Doomed Crop Red'",
+    "file": "female_clothing_doomed_red_crop.png"
+   },
+   {
+    "gender": "",
+    "category": "Mouth",
+    "csv_name": "'Happy '",
+    "file": "female_mouth_happy.png"
+   },
+   {
+    "gender": "",
+    "category": "Body",
+    "csv_name": "'Unobtainium '",
+    "file": "female_body_unobtainium.png"
+   }
+  ],
+  "ambiguous": [
+   {
+    "gender": "Female",
+    "category": "Body",
+    "value": "Unobtainium",
+    "files": [
+     "body_unobtainium.png",
+     "female_body_unobtainium.png"
+    ]
+   }
+  ],
+  "csv_files_missing_on_disk": [],
+  "orphan_files_on_disk": [],
+  "csv_names_with_stray_whitespace": [
+   "'AI Helmet '",
+   "'American Flag '",
+   "'Ammo '",
+   "'Angel Wings '",
+   "'Angry '",
+   "'Anonymous Mask '",
+   "'Ape '",
+   "'Army Helmet '",
+   "'Astronaut Helmet '",
+   "'Aviators '",
+   "'BW Cap Black '",
+   "'BW Cap Red '",
+   "'BW Cap White '",
+   "'Banana '",
+   "'Basketball '",
+   "'Baywatch '",
+   "'Beret '",
+   "'Black Backwards Cap '",
+   "'Black Beanie '",
+   "'Black Crewcut '",
+   "'Black Mullet '",
+   "'Black T '",
+   "'Blonde Crewcut '",
+   "'Blonde Long '",
+   "'Blonde Mohawk '",
+   "'Blonde Mullet '",
+   "'Blue '",
+   "'Blue Beam eyes '",
+   "'Blue Pigtails '",
+   "'Boombox '",
+   "'Boxing Robe '",
+   "'Braces '",
+   "'Brown '",
+   "'Brown Crewcut '",
+   "'Brown Mullet '",
+   "'Bunny Ears '",
+   "'Cape Purple '",
+   "'Cape Red '",
+   "'Chef '",
+   "'Chef Hat '",
+   "'Chopper '",
+   "'Chromie Squiggle Above Head '",
+   "'Cigar '",
+   "'Clock '",
+   "'Cobra '",
+   "'Coin '",
+   "'Cosomo Shades '",
+   "'Cowboy Jacket '",
+   "'Crazy Hair '",
+   "'Croc Hoodie '",
+   "'Crown '",
+   "'CypherPunk Necklace '",
+   "'CypherPunks Necklace '",
+   "'Devil Horns '",
+   "'Diamond '",
+   "'Diamond Crown '",
+   "'Diamond Tooth '",
+   "'Dollar Bills '",
+   "'Doomed T '",
+   "'Doomed T Mono '",
+   "'Doomed T Red '",
+   "'Dress (new pattern) '",
+   "'Drone '",
+   "'ETH T '",
+   "'Fidenza T '",
+   "'Fire '",
+   "'Fireman Helmet '",
+   "'Flower Dress '",
+   "'Focused '",
+   "'GInger Pigtails '",
+   "'Gaming Control '",
+   "'Ginger Crewcut '",
+   "'Ginger Mullet '",
+   "'Gold '",
+   "'Gold Aviators '",
+   "'Gold Bandana '",
+   "'Gold Coins '",
+   "'Gold Mohawk '",
+   "'Gold Tooth '",
+   "'Goth Lipstick '",
+   "'Grills '",
+   "'Halo '",
+   "'Happy '",
+   "'Hard Hat '",
+   "'Hawaiian '",
+   "'Hiesenburg Hat '",
+   "'JPG T '",
+   "'Jail Strips '",
+   "'Joint '",
+   "'Katana '",
+   "'Katana Flame '",
+   "'Laptop '",
+   "'Large Beard '",
+   "'Laugh '",
+   "'Lock '",
+   "'Maccas Hat '",
+   "'Martini '",
+   "'Max Pain '",
+   "'Missing Teeth '",
+   "'Mogged '",
+   "'Monroe '",
+   "'Moodeng T '",
+   "'Napolean '",
+   "'Peach Beanie '",
+   "'Pet Bird '",
+   "'Pet Cat '",
+   "'Pet Doge '",
+   "'Pet Eagle '",
+   "'Pet Pepe '",
+   "'Pink '",
+   "'Pink Bandana '",
+   "'Pink Bathrobe '",
+   "'Pink Bow '",
+   "'Pink Crewcut '",
+   "'Pink Lipstick '",
+   "'Pink Retro '",
+   "'Pink Sidehair '",
+   "'Pipe '",
+   "'Pirate '",
+   "'Pizza '",
+   "'Poker Chips '",
+   "'Poker Face '",
+   "'Popcorn '",
+   "'Punk Jacket 2 '",
+   "'Purple '",
+   "'Purple Bandana '",
+   "'Purple Mullet '",
+   "'Purple Retro '",
+   "'Red '",
+   "'Red Bow '",
+   "'Red Laser '",
+   "'Red Strapless '",
+   "'Regular Animals '",
+   "'Relaxed '",
+   "'Right click and save shades '",
+   "'Ripped T '",
+   "'Sad '",
+   "'Scar '",
+   "'Selleck '",
+   "'Short Dreadlocks '",
+   "'Shotgun '",
+   "'Skeleton '",
+   "'Smile '",
+   "'Spacesuit '",
+   "'Spinner Hat '",
+   "'Teal Laser '",
+   "'Tiara Blue Gem '",
+   "'Tiara Purple Gem '",
+   "'Tiger Hoodie '",
+   "'Tongue out '",
+   "'Toothpick '",
+   "'Unicorns '",
+   "'Unobtainium '",
+   "'Vampire '",
+   "'Vape '",
+   "'Viking Helmet '",
+   "'Vitalik T '",
+   "'Welding Goggles '",
+   "'Whale Hoodie '",
+   "'White T '",
+   "'Wizard Hat '",
+   "'Wolf of Wallstreet Suit '",
+   "'XCOPY '",
+   "'Yellow Cap '",
+   "'Yellow Sweater '"
+  ],
+  "near_miss_pairs": [
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Angel Wings",
+    "csv_name": "Angel Wings ",
+    "csv_gender": "Male",
+    "file": "accessory_angel_wings.png",
+    "punks": 27,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Angel Wings",
+    "csv_name": "Angel Wings ",
+    "csv_gender": "Female",
+    "file": "accessory_wings_fem.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Anonymous Mask",
+    "csv_name": "Anonymous Mask ",
+    "csv_gender": "Male",
+    "file": "accessory_anonymous.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Basketball",
+    "csv_name": "Basketball ",
+    "csv_gender": "Male",
+    "file": "accessory_basketball 1.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Basketball",
+    "csv_name": "Basketball ",
+    "csv_gender": "Female",
+    "file": "accessory_basketball.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Boombox",
+    "csv_name": "Boombox ",
+    "csv_gender": "Male",
+    "file": "accessory_boombox.png",
+    "punks": 32,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Boombox",
+    "csv_name": "Boombox ",
+    "csv_gender": "Female",
+    "file": "accessory_boombox.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Cobra",
+    "csv_name": "Cobra ",
+    "csv_gender": "Male",
+    "file": "accessory_cobra.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Cobra",
+    "csv_name": "Cobra ",
+    "csv_gender": "Female",
+    "file": "accessory_cobra.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Dollar Bills",
+    "csv_name": "Dollar Bills ",
+    "csv_gender": "Male",
+    "file": "accessory_dollar_bills.png",
+    "punks": 32,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Dollar Bills",
+    "csv_name": "Dollar Bills ",
+    "csv_gender": "Female",
+    "file": "accessory_dollar_bills.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Drone",
+    "csv_name": "Drone ",
+    "csv_gender": "Male",
+    "file": "accessory_drone.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Drone",
+    "csv_name": "Drone ",
+    "csv_gender": "Female",
+    "file": "accessory_drone.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Gold Coins",
+    "csv_name": "Gold Coins ",
+    "csv_gender": "Male",
+    "file": "accessory_gold_coins.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Gold Coins",
+    "csv_name": "Gold Coins ",
+    "csv_gender": "Female",
+    "file": "accessory_gold_coins.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Katana",
+    "csv_name": "Katana ",
+    "csv_gender": "Male",
+    "file": "accessory_katana.png",
+    "punks": 31,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Katana",
+    "csv_name": "Katana ",
+    "csv_gender": "Female",
+    "file": "accessory_katana.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Katana Flame",
+    "csv_name": "Katana Flame ",
+    "csv_gender": "Male",
+    "file": "accessory_katana_flame.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Katana Flame",
+    "csv_name": "Katana Flame ",
+    "csv_gender": "Female",
+    "file": "accessory_katana_flame.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Laptop",
+    "csv_name": "Laptop ",
+    "csv_gender": "Male",
+    "file": "accessory_laptop.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Laptop",
+    "csv_name": "Laptop ",
+    "csv_gender": "Female",
+    "file": "accessory_laptop.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Martini",
+    "csv_name": "Martini ",
+    "csv_gender": "Female",
+    "file": "accessory_martini.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Pet Bird",
+    "csv_name": "Pet Bird ",
+    "csv_gender": "Male",
+    "file": "accessory_bird.png",
+    "punks": 31,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Pet Bird",
+    "csv_name": "Pet Bird ",
+    "csv_gender": "Female",
+    "file": "accessory_bird.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Pet Cat",
+    "csv_name": "Pet Cat ",
+    "csv_gender": "Male",
+    "file": "accessory_cat.png",
+    "punks": 31,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Pet Cat",
+    "csv_name": "Pet Cat ",
+    "csv_gender": "Female",
+    "file": "accessory_cat.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Poker Chips",
+    "csv_name": "Poker Chips ",
+    "csv_gender": "Male",
+    "file": "accessory_poker_chips.png",
+    "punks": 30,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Poker Chips",
+    "csv_name": "Poker Chips ",
+    "csv_gender": "Female",
+    "file": "accessory_poker_chips.png",
+    "punks": 4,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Popcorn",
+    "csv_name": "Popcorn ",
+    "csv_gender": "Male",
+    "file": "accessory_popcorn.png",
+    "punks": 31,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Regular Animals",
+    "csv_name": "Regular Animals ",
+    "csv_gender": "Male",
+    "file": "accessory_beeplebot.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Regular Animals",
+    "csv_name": "Regular Animals ",
+    "csv_gender": "Female",
+    "file": "accessory_beeplebot.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Shotgun",
+    "csv_name": "Shotgun ",
+    "csv_gender": "Male",
+    "file": "accessory_shotgun.png",
+    "punks": 31,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Shotgun",
+    "csv_name": "Shotgun ",
+    "csv_gender": "Female",
+    "file": "accessory_shotgun.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Unicorns",
+    "csv_name": "Unicorns ",
+    "csv_gender": "Male",
+    "file": "accessory_unicorns.png",
+    "punks": 30,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Unicorns",
+    "csv_name": "Unicorns ",
+    "csv_gender": "Female",
+    "file": "accessory_unicorns.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Body",
+    "value": "Ape",
+    "csv_name": "Ape ",
+    "csv_gender": "Female",
+    "file": "female_body_ape.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Body",
+    "value": "Unobtainium",
+    "csv_name": "Unobtainium ",
+    "csv_gender": "Male",
+    "file": "body_unobtainium.png",
+    "punks": 4,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "American Flag",
+    "csv_name": "American Flag ",
+    "csv_gender": "Female",
+    "file": "female_clothing_flag.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Ammo",
+    "csv_name": "Ammo ",
+    "csv_gender": "Male",
+    "file": "clothing_ammo.png",
+    "punks": 124,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Baywatch",
+    "csv_name": "Baywatch ",
+    "csv_gender": "Female",
+    "file": "female_clothing_baywatch.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Black T",
+    "csv_name": "Black T ",
+    "csv_gender": "Male",
+    "file": "clothing_black_t_male.png",
+    "punks": 826,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Black T",
+    "csv_name": "Black T ",
+    "csv_gender": "Female",
+    "file": "female_clothing_tshirt_black.png",
+    "punks": 87,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Boxing Robe",
+    "csv_name": "Boxing Robe ",
+    "csv_gender": "Male",
+    "file": "clothing_boxing_robe.png",
+    "punks": 100,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Chef",
+    "csv_name": "Chef ",
+    "csv_gender": "Male",
+    "file": "clothing_chef.png",
+    "punks": 84,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Cowboy Jacket",
+    "csv_name": "Cowboy Jacket ",
+    "csv_gender": "Male",
+    "file": "clothing_cowboy.png",
+    "punks": 130,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Croc Hoodie",
+    "csv_name": "Croc Hoodie ",
+    "csv_gender": "Male",
+    "file": "clothing_hoodie_croc.png",
+    "punks": 27,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Doomed T",
+    "csv_name": "Doomed T ",
+    "csv_gender": "Female",
+    "file": "female_clothing_doomed_female.png",
+    "punks": 10,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Doomed T Mono",
+    "csv_name": "Doomed T Mono ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_doomed_mono.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Doomed T Red",
+    "csv_name": "Doomed T Red ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_doomed_red.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Doomed T Red",
+    "csv_name": "Doomed T Red ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_doomed_red.png",
+    "punks": 1,
+    "how": "near-miss-cross-gender"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Fidenza T",
+    "csv_name": "Fidenza T ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_fidenza.png",
+    "punks": 32,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Flower Dress",
+    "csv_name": "Flower Dress ",
+    "csv_gender": "Female",
+    "file": "female_clothing_dress_flowers.png",
+    "punks": 43,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Hawaiian",
+    "csv_name": "Hawaiian ",
+    "csv_gender": "Male",
+    "file": "clothing_hawaiian.png",
+    "punks": 91,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "JPG T",
+    "csv_name": "JPG T ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_jpeg.png",
+    "punks": 33,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Moodeng T",
+    "csv_name": "Moodeng T ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_moodeng.png",
+    "punks": 85,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Pink Bathrobe",
+    "csv_name": "Pink Bathrobe ",
+    "csv_gender": "Female",
+    "file": "female_clothing_robe_pink.png",
+    "punks": 15,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Red Strapless",
+    "csv_name": "Red Strapless ",
+    "csv_gender": "Female",
+    "file": "female_clothing_bra_red.png",
+    "punks": 28,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Ripped T",
+    "csv_name": "Ripped T ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_ripped.png",
+    "punks": 133,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Spacesuit",
+    "csv_name": "Spacesuit ",
+    "csv_gender": "Male",
+    "file": "clothing_spacesuit.png",
+    "punks": 41,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Tiger Hoodie",
+    "csv_name": "Tiger Hoodie ",
+    "csv_gender": "Male",
+    "file": "clothing_hoodie_tiger.png",
+    "punks": 29,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Vitalik T",
+    "csv_name": "Vitalik T ",
+    "csv_gender": "Male",
+    "file": "clothing_tshirt_vitalik.png",
+    "punks": 86,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Whale Hoodie",
+    "csv_name": "Whale Hoodie ",
+    "csv_gender": "Male",
+    "file": "clothing_hoodie_whale.png",
+    "punks": 29,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Whale Hoodie",
+    "csv_name": "Whale Hoodie ",
+    "csv_gender": "Female",
+    "file": "female_clothing_whale_hoodie.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "White T",
+    "csv_name": "White T ",
+    "csv_gender": "Male",
+    "file": "clothing_white_t_male.png",
+    "punks": 820,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Yellow Sweater",
+    "csv_name": "Yellow Sweater ",
+    "csv_gender": "Male",
+    "file": "clothing_sweater_yellow.png",
+    "punks": 51,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Earring",
+    "value": "Diamond",
+    "csv_name": "Diamond ",
+    "csv_gender": "Male",
+    "file": "earring_diamond.png",
+    "punks": 7,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Earring",
+    "value": "Gold",
+    "csv_name": "Gold ",
+    "csv_gender": "Male",
+    "file": "earring_gold.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Earring",
+    "value": "Gold Hoop",
+    "csv_name": "Gold hoop",
+    "csv_gender": "Female",
+    "file": "earring_gold_hoop.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Earring",
+    "value": "Pirate",
+    "csv_name": "Pirate ",
+    "csv_gender": "Male",
+    "file": "earring_pirate.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Aviators",
+    "csv_name": "Aviators ",
+    "csv_gender": "Male",
+    "file": "eyes_aviators.png",
+    "punks": 243,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Aviators",
+    "csv_name": "Aviators ",
+    "csv_gender": "Female",
+    "file": "eyes_aviators.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Blue",
+    "csv_name": "Blue ",
+    "csv_gender": "Male",
+    "file": "eyes_blue.png",
+    "punks": 1993,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Blue",
+    "csv_name": "Blue ",
+    "csv_gender": "Female",
+    "file": "eyes_blue.png",
+    "punks": 234,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Brown",
+    "csv_name": "Brown ",
+    "csv_gender": "Male",
+    "file": "eyes_brown.png",
+    "punks": 2633,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Brown",
+    "csv_name": "Brown ",
+    "csv_gender": "Female",
+    "file": "eyes_brown.png",
+    "punks": 294,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Fire",
+    "csv_name": "Fire ",
+    "csv_gender": "Male",
+    "file": "eyes_fire.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Gaming Control",
+    "csv_name": "Gaming Control ",
+    "csv_gender": "Male",
+    "file": "eyes_gamercontrol.png",
+    "punks": 95,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Gaming Control",
+    "csv_name": "Gaming Control ",
+    "csv_gender": "Female",
+    "file": "eyes_gamercontrol.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Gold",
+    "csv_name": "Gold ",
+    "csv_gender": "Male",
+    "file": "eyes_gold.png",
+    "punks": 10,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Gold",
+    "csv_name": "Gold ",
+    "csv_gender": "Female",
+    "file": "eyes_gold.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Gold Aviators",
+    "csv_name": "Gold Aviators ",
+    "csv_gender": "Male",
+    "file": "eyes_aviators_gold 1.png",
+    "punks": 11,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Gold Aviators",
+    "csv_name": "Gold Aviators ",
+    "csv_gender": "Female",
+    "file": "eyes_aviators_gold.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Max Pain",
+    "csv_name": "Max Pain ",
+    "csv_gender": "Male",
+    "file": "eyes_maxpain.png",
+    "punks": 94,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Max Pain",
+    "csv_name": "Max Pain ",
+    "csv_gender": "Female",
+    "file": "eyes_maxpain.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Mogged",
+    "csv_name": "Mogged ",
+    "csv_gender": "Male",
+    "file": "eyes_mogged.png",
+    "punks": 33,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Mogged",
+    "csv_name": "Mogged ",
+    "csv_gender": "Female",
+    "file": "eyes_mogged.png",
+    "punks": 5,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Pink",
+    "csv_name": "Pink ",
+    "csv_gender": "Male",
+    "file": "eyes_pink.png",
+    "punks": 629,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Pink",
+    "csv_name": "Pink ",
+    "csv_gender": "Female",
+    "file": "eyes_pink.png",
+    "punks": 80,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Poker Face",
+    "csv_name": "Poker Face ",
+    "csv_gender": "Male",
+    "file": "eyes_poker_glasses.png",
+    "punks": 259,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Poker Face",
+    "csv_name": "Poker Face ",
+    "csv_gender": "Female",
+    "file": "eyes_poker_glasses.png",
+    "punks": 11,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Purple Retro",
+    "csv_name": "Purple Retro ",
+    "csv_gender": "Male",
+    "file": "eyes_retro_purple.png",
+    "punks": 112,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Purple Retro",
+    "csv_name": "Purple Retro ",
+    "csv_gender": "Female",
+    "file": "eyes_retro_purple.png",
+    "punks": 10,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Red",
+    "csv_name": "Red ",
+    "csv_gender": "Male",
+    "file": "eyes_red.png",
+    "punks": 824,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Red",
+    "csv_name": "Red ",
+    "csv_gender": "Female",
+    "file": "eyes_red.png",
+    "punks": 64,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Scar",
+    "csv_name": "Scar ",
+    "csv_gender": "Male",
+    "file": "eyes_scar.png",
+    "punks": 11,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Scar",
+    "csv_name": "Scar ",
+    "csv_gender": "Female",
+    "file": "eyes_scar.png",
+    "punks": 6,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Welding Goggles",
+    "csv_name": "Welding Goggles ",
+    "csv_gender": "Male",
+    "file": "eyes_weld_goggles.png",
+    "punks": 53,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Welding Goggles",
+    "csv_name": "Welding Goggles ",
+    "csv_gender": "Female",
+    "file": "eyes_weld_goggles.png",
+    "punks": 28,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "XCOPY",
+    "csv_name": "XCOPY ",
+    "csv_gender": "Male",
+    "file": "eyes_xcopy.png",
+    "punks": 63,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "XCOPY",
+    "csv_name": "XCOPY ",
+    "csv_gender": "Female",
+    "file": "eyes_xcopy.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "AI Helmet",
+    "csv_name": "AI Helmet ",
+    "csv_gender": "Male",
+    "file": "head_ai_helmet.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Army Helmet",
+    "csv_name": "Army Helmet ",
+    "csv_gender": "Male",
+    "file": "head_army.png",
+    "punks": 84,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Astronaut Helmet",
+    "csv_name": "Astronaut Helmet ",
+    "csv_gender": "Male",
+    "file": "head_space.png",
+    "punks": 38,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Beret",
+    "csv_name": "Beret ",
+    "csv_gender": "Female",
+    "file": "female_head_beret.png",
+    "punks": 23,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Black Crewcut",
+    "csv_name": "Black Crewcut ",
+    "csv_gender": "Male",
+    "file": "head_black_crewcut.png",
+    "punks": 218,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Black Mullet",
+    "csv_name": "Black Mullet ",
+    "csv_gender": "Male",
+    "file": "head_mullet_black.png",
+    "punks": 120,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Black Mullet",
+    "csv_name": "Black Mullet ",
+    "csv_gender": "Female",
+    "file": "head_mullet_black.png",
+    "punks": 22,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Blonde Crewcut",
+    "csv_name": "Blonde Crewcut ",
+    "csv_gender": "Male",
+    "file": "head_blonde_crewcut.png",
+    "punks": 208,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blonde Long",
+    "csv_name": "Blonde Long ",
+    "csv_gender": "Female",
+    "file": "female_hair_long_blonde.png",
+    "punks": 34,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Blonde Mohawk",
+    "csv_name": "Blonde Mohawk ",
+    "csv_gender": "Male",
+    "file": "head_blonde_mohawk 1.png",
+    "punks": 210,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blonde Mohawk",
+    "csv_name": "Blonde Mohawk ",
+    "csv_gender": "Female",
+    "file": "head_blonde_mohawk.png",
+    "punks": 13,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Blonde Mullet",
+    "csv_name": "Blonde Mullet ",
+    "csv_gender": "Male",
+    "file": "head_mullet_blonde 1.png",
+    "punks": 204,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blonde Mullet",
+    "csv_name": "Blonde Mullet ",
+    "csv_gender": "Female",
+    "file": "head_mullet_blonde.png",
+    "punks": 11,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blue Pigtails",
+    "csv_name": "Blue Pigtails ",
+    "csv_gender": "Female",
+    "file": "female_hair_pigtails_blue.png",
+    "punks": 39,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Brown Crewcut",
+    "csv_name": "Brown Crewcut ",
+    "csv_gender": "Male",
+    "file": "head_brown_crewcut.png",
+    "punks": 209,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Brown Mullet",
+    "csv_name": "Brown Mullet ",
+    "csv_gender": "Male",
+    "file": "head_mullet_brown.png",
+    "punks": 154,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Brown Mullet",
+    "csv_name": "Brown Mullet ",
+    "csv_gender": "Female",
+    "file": "head_mullet_brown.png",
+    "punks": 28,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Bunny Ears",
+    "csv_name": "Bunny Ears ",
+    "csv_gender": "Male",
+    "file": "head_bunny.png",
+    "punks": 59,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Bunny Ears",
+    "csv_name": "Bunny Ears ",
+    "csv_gender": "Female",
+    "file": "head_bunny.png",
+    "punks": 6,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Chef Hat",
+    "csv_name": "Chef Hat ",
+    "csv_gender": "Male",
+    "file": "head_chef.png",
+    "punks": 92,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Crown",
+    "csv_name": "Crown ",
+    "csv_gender": "Male",
+    "file": "head_crown_gold.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Devil Horns",
+    "csv_name": "Devil Horns ",
+    "csv_gender": "Male",
+    "file": "head_devil_horns.png",
+    "punks": 86,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Diamond Crown",
+    "csv_name": "Diamond Crown ",
+    "csv_gender": "Male",
+    "file": "head_crown_diamond.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Fireman Helmet",
+    "csv_name": "Fireman Helmet ",
+    "csv_gender": "Male",
+    "file": "head_fireman.png",
+    "punks": 83,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Fireman Helmet",
+    "csv_name": "Fireman Helmet ",
+    "csv_gender": "Female",
+    "file": "head_fireman.png",
+    "punks": 21,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Ginger Crewcut",
+    "csv_name": "Ginger Crewcut ",
+    "csv_gender": "Male",
+    "file": "head_ginger_crewcut.png",
+    "punks": 180,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Ginger Mullet",
+    "csv_name": "Ginger Mullet ",
+    "csv_gender": "Male",
+    "file": "head_mullet_ginger.png",
+    "punks": 139,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Ginger Mullet",
+    "csv_name": "Ginger Mullet ",
+    "csv_gender": "Female",
+    "file": "head_mullet_ginger.png",
+    "punks": 15,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Ginger Pigtails",
+    "csv_name": "GInger Pigtails ",
+    "csv_gender": "Female",
+    "file": "female_hair_pigtails_ginger.png",
+    "punks": 14,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Gold Mohawk",
+    "csv_name": "Gold Mohawk ",
+    "csv_gender": "Male",
+    "file": "head_gold_mohawk.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Gold Mohawk",
+    "csv_name": "Gold Mohawk ",
+    "csv_gender": "Female",
+    "file": "head_gold_mohawk.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Halo",
+    "csv_name": "Halo ",
+    "csv_gender": "Male",
+    "file": "head_halo.png",
+    "punks": 10,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Hard Hat",
+    "csv_name": "Hard Hat ",
+    "csv_gender": "Male",
+    "file": "head_hardhat.png",
+    "punks": 79,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Hard Hat",
+    "csv_name": "Hard Hat ",
+    "csv_gender": "Female",
+    "file": "head_hardhat.png",
+    "punks": 15,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Peach Beanie",
+    "csv_name": "Peach Beanie ",
+    "csv_gender": "Male",
+    "file": "head_beanie_peach.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Pink Bandana",
+    "csv_name": "Pink Bandana ",
+    "csv_gender": "Male",
+    "file": "head_bandana_pink.png",
+    "punks": 120,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Pink Bow",
+    "csv_name": "Pink Bow ",
+    "csv_gender": "Female",
+    "file": "female_hair_bow_pink.png",
+    "punks": 10,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Pink Crewcut",
+    "csv_name": "Pink Crewcut ",
+    "csv_gender": "Male",
+    "file": "head_pink_crewcut.png",
+    "punks": 187,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Pink Sidehair",
+    "csv_name": "Pink Sidehair ",
+    "csv_gender": "Female",
+    "file": "female_hair_side_pink.png",
+    "punks": 25,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Purple Bandana",
+    "csv_name": "Purple Bandana ",
+    "csv_gender": "Male",
+    "file": "head_bandana_purple.png",
+    "punks": 127,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Purple Mullet",
+    "csv_name": "Purple Mullet ",
+    "csv_gender": "Male",
+    "file": "head_mullet_purple.png",
+    "punks": 171,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Purple Mullet",
+    "csv_name": "Purple Mullet ",
+    "csv_gender": "Female",
+    "file": "head_mullet_purple.png",
+    "punks": 16,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Red Bow",
+    "csv_name": "Red Bow ",
+    "csv_gender": "Female",
+    "file": "female_hair_bow_red.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Short Dreadlocks",
+    "csv_name": "Short Dreadlocks ",
+    "csv_gender": "Male",
+    "file": "head_dreads_short.png",
+    "punks": 175,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Spinner Hat",
+    "csv_name": "Spinner Hat ",
+    "csv_gender": "Male",
+    "file": "head_hat_spinner.png",
+    "punks": 44,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Viking Helmet",
+    "csv_name": "Viking Helmet ",
+    "csv_gender": "Male",
+    "file": "head_viking.png",
+    "punks": 72,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Viking Helmet",
+    "csv_name": "Viking Helmet ",
+    "csv_gender": "Female",
+    "file": "head_viking.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Wizard Hat",
+    "csv_name": "Wizard Hat ",
+    "csv_gender": "Male",
+    "file": "head_wizard.png",
+    "punks": 50,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Wizard Hat",
+    "csv_name": "Wizard Hat ",
+    "csv_gender": "Female",
+    "file": "head_wizard.png",
+    "punks": 8,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Angry",
+    "csv_name": "Angry ",
+    "csv_gender": "Male",
+    "file": "mouth_angry.png",
+    "punks": 830,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Banana",
+    "csv_name": "Banana ",
+    "csv_gender": "Male",
+    "file": "mouth_banana.png",
+    "punks": 32,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Banana",
+    "csv_name": "Banana ",
+    "csv_gender": "Female",
+    "file": "female_mouth_banana.png",
+    "punks": 12,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Braces",
+    "csv_name": "Braces ",
+    "csv_gender": "Female",
+    "file": "female_mouth_braces.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Chopper",
+    "csv_name": "Chopper ",
+    "csv_gender": "Male",
+    "file": "mouth_chopper.png",
+    "punks": 198,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Cigar",
+    "csv_name": "Cigar ",
+    "csv_gender": "Male",
+    "file": "mouth_cigar.png",
+    "punks": 91,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Cigar",
+    "csv_name": "Cigar ",
+    "csv_gender": "Female",
+    "file": "female_mouth_cigar.png",
+    "punks": 31,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Coin",
+    "csv_name": "Coin ",
+    "csv_gender": "Male",
+    "file": "mouth_coin_eth.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Diamond Tooth",
+    "csv_name": "Diamond Tooth ",
+    "csv_gender": "Male",
+    "file": "mouth_diamond_tooth.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Diamond Tooth",
+    "csv_name": "Diamond Tooth ",
+    "csv_gender": "Female",
+    "file": "female_mouth_diamond.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Focused",
+    "csv_name": "Focused ",
+    "csv_gender": "Male",
+    "file": "mouth_focused.png",
+    "punks": 885,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Gold Tooth",
+    "csv_name": "Gold Tooth ",
+    "csv_gender": "Male",
+    "file": "mouth_gold_tooth.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Gold Tooth",
+    "csv_name": "Gold Tooth ",
+    "csv_gender": "Female",
+    "file": "female_mouth_gold_tooth.png",
+    "punks": 5,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Goth Lipstick",
+    "csv_name": "Goth Lipstick ",
+    "csv_gender": "Female",
+    "file": "female_mouth_goth.png",
+    "punks": 3,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Grills",
+    "csv_name": "Grills ",
+    "csv_gender": "Male",
+    "file": "mouth_grills.png",
+    "punks": 10,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Grills",
+    "csv_name": "Grills ",
+    "csv_gender": "Female",
+    "file": "female_mouth_grills.png",
+    "punks": 1,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Joint",
+    "csv_name": "Joint ",
+    "csv_gender": "Male",
+    "file": "mouth_joint.png",
+    "punks": 95,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Joint",
+    "csv_name": "Joint ",
+    "csv_gender": "Female",
+    "file": "female_mouth_joint.png",
+    "punks": 28,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Large Beard",
+    "csv_name": "Large Beard ",
+    "csv_gender": "Male",
+    "file": "mouth_beard_long.png",
+    "punks": 382,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Laugh",
+    "csv_name": "Laugh ",
+    "csv_gender": "Male",
+    "file": "mouth_laugh.png",
+    "punks": 546,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Missing Teeth",
+    "csv_name": "Missing Teeth ",
+    "csv_gender": "Male",
+    "file": "mouth_missing_teeth.png",
+    "punks": 460,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Missing Teeth",
+    "csv_name": "Missing Teeth ",
+    "csv_gender": "Female",
+    "file": "female_mouth_missing_teeth.png",
+    "punks": 29,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Pink Lipstick",
+    "csv_name": "Pink Lipstick ",
+    "csv_gender": "Female",
+    "file": "female_mouth_pink.png",
+    "punks": 11,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Pipe",
+    "csv_name": "Pipe ",
+    "csv_gender": "Male",
+    "file": "mouth_pipe.png",
+    "punks": 94,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Pipe",
+    "csv_name": "Pipe ",
+    "csv_gender": "Female",
+    "file": "female_mouth_pipe.png",
+    "punks": 20,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Pizza",
+    "csv_name": "Pizza ",
+    "csv_gender": "Male",
+    "file": "mouth_pizza.png",
+    "punks": 77,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Pizza",
+    "csv_name": "Pizza ",
+    "csv_gender": "Female",
+    "file": "female_mouth_pizza.png",
+    "punks": 18,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Relaxed",
+    "csv_name": "Relaxed ",
+    "csv_gender": "Male",
+    "file": "mouth_relaxed.png",
+    "punks": 924,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Sad",
+    "csv_name": "Sad ",
+    "csv_gender": "Male",
+    "file": "mouth_sad.png",
+    "punks": 726,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Tongue Out",
+    "csv_name": "Tongue out ",
+    "csv_gender": "Male",
+    "file": "mouth_tongue.png",
+    "punks": 445,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Tongue Out",
+    "csv_name": "Tongue out ",
+    "csv_gender": "Female",
+    "file": "female_mouth_tongue.png",
+    "punks": 9,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Toothpick",
+    "csv_name": "Toothpick ",
+    "csv_gender": "Male",
+    "file": "mouth_toothpick.png",
+    "punks": 83,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Toothpick",
+    "csv_name": "Toothpick ",
+    "csv_gender": "Female",
+    "file": "female_mouth_toothpick.png",
+    "punks": 30,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Vampire",
+    "csv_name": "Vampire ",
+    "csv_gender": "Male",
+    "file": "mouth_vampire.png",
+    "punks": 517,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Vampire",
+    "csv_name": "Vampire ",
+    "csv_gender": "Female",
+    "file": "female_mouth_vampire.png",
+    "punks": 2,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Vape",
+    "csv_name": "Vape ",
+    "csv_gender": "Male",
+    "file": "mouth_vape.png",
+    "punks": 94,
+    "how": "near-miss"
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Vape",
+    "csv_name": "Vape ",
+    "csv_gender": "Female",
+    "file": "female_mouth_vape.png",
+    "punks": 29,
+    "how": "near-miss"
+   }
+  ],
+  "non_art_csv_rows": [
+   {
+    "category": "Background",
+    "name": "'Punk '",
+    "file": "background.png"
+   },
+   {
+    "category": "Background",
+    "name": "'Punk '",
+    "file": "background.png"
+   }
+  ]
+ },
+ "step2": {
+  "unique_element_files_per_category": {
+   "Body": 26,
+   "Clothing": 102,
+   "Head": 99,
+   "Earring": 6,
+   "Eyes": 36,
+   "Mouth": 51,
+   "Accessory": 35
+  },
+  "grand_total_unique_element_files": 355,
+  "metadata_unique_values_per_category": {
+   "Body": 13,
+   "Clothing": 73,
+   "Head": 94,
+   "Earring": 6,
+   "Eyes": 34,
+   "Mouth": 31,
+   "Accessory": 31
+  },
+  "metadata_unique_value_total": 282
+ },
+ "step3": {
+  "dimension_groups": {
+   "(2000, 2000)": 355,
+   "(1600, 1600)": 1
+  },
+  "native_side_histogram": {
+   "40": 355,
+   "1": 1
+  },
+  "files_checked": 356,
+  "blockers": [
+   {
+    "file": "background.png",
+    "size": [
+     1600,
+     1600
+    ],
+    "issue": "not 2000x2000 (native 1x1 at 1600px blocks still recovers losslessly)"
+   }
+  ]
+ },
+ "step4": {
+  "global_distinct_opaque_colours": 379,
+  "per_element_min": 1,
+  "per_element_max": 21,
+  "semi_transparent": [
+   {
+    "file": "mouth_focused.png",
+    "semi_alpha_colors": 1
+   },
+   {
+    "file": "mouth_happy.png",
+    "semi_alpha_colors": 1
+   },
+   {
+    "file": "mouth_sad.png",
+    "semi_alpha_colors": 1
+   }
+  ],
+  "no_transparency": [
+   {
+    "file": "background.png",
+    "issue": "no fully transparent pixel"
+   }
+  ]
+ },
+ "step5": {
+  "export_encodes_z_order": false,
+  "inferred_z_order": [
+   "Background",
+   "Body",
+   "Clothing",
+   "Head",
+   "Earring",
+   "Eyes",
+   "Mouth",
+   "Accessory"
+  ],
+  "basis": "CSVs carry no layer index; order from the local punk-editor compositor, tested empirically in step 6"
+ },
+ "coverage": {
+  "punks_fully_resolvable": 6692,
+  "punks_with_gaps": 3308,
+  "gap_values": [
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Shades",
+    "punks": 336
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Thick Stache",
+    "punks": 290
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Brown Beard",
+    "punks": 276
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Napoleon",
+    "punks": 275
+   },
+   {
+    "gender": "Male",
+    "category": "Body",
+    "value": "Bones",
+    "punks": 238
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Red BW Cap",
+    "punks": 176
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Porkpie Hat",
+    "punks": 170
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "White BW Cap",
+    "punks": 169
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Black BW Cap",
+    "punks": 161
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Right Click",
+    "punks": 127
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Punk Jacket 1",
+    "punks": 124
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Red Cape",
+    "punks": 123
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Cosmo Shades",
+    "punks": 122
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Wallstreet Suit",
+    "punks": 115
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Prison Stripes",
+    "punks": 98
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Combover",
+    "punks": 82
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Crazy Purple",
+    "punks": 79
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Purple Cape",
+    "punks": 61
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Laser Eyes",
+    "punks": 59
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Brunette Sidehair",
+    "punks": 56
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Brunette Long",
+    "punks": 47
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Shades",
+    "punks": 46
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Red Visor",
+    "punks": 46
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "#24 Jersey",
+    "punks": 46
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Blue Beams",
+    "punks": 46
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Pink Beanie",
+    "punks": 43
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Spot Puffer",
+    "punks": 32
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Orange Cap",
+    "punks": 28
+   },
+   {
+    "gender": "Male",
+    "category": "Head",
+    "value": "Forrest Beanie",
+    "punks": 27
+   },
+   {
+    "gender": "Female",
+    "category": "Body",
+    "value": "Bones",
+    "punks": 26
+   },
+   {
+    "gender": "Female",
+    "category": "Mouth",
+    "value": "Goofy",
+    "punks": 25
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Polka Dot Dress",
+    "punks": 25
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Black BW Cap",
+    "punks": 25
+   },
+   {
+    "gender": "Male",
+    "category": "Clothing",
+    "value": "Gold Cape",
+    "punks": 24
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Punk Jacket 3",
+    "punks": 21
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Navy Beanie",
+    "punks": 20
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Red Visor",
+    "punks": 19
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blonde 50s",
+    "punks": 16
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Punk Jacket 4",
+    "punks": 10
+   },
+   {
+    "gender": "Male",
+    "category": "Mouth",
+    "value": "Grey Beard",
+    "punks": 10
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Laser Eyes",
+    "punks": 10
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Gold Boombox",
+    "punks": 10
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Spot Puffer",
+    "punks": 9
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Punk Necklace",
+    "punks": 9
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Right Click",
+    "punks": 9
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Crazy 80s",
+    "punks": 8
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "On Fire",
+    "punks": 6
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Blue Tiara",
+    "punks": 6
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "On Fire",
+    "punks": 5
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Pink Cape",
+    "punks": 5
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Classic Shades",
+    "punks": 5
+   },
+   {
+    "gender": "Female",
+    "category": "Head",
+    "value": "Purple Tiara",
+    "punks": 4
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Gold Cape",
+    "punks": 4
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Blue Beams",
+    "punks": 3
+   },
+   {
+    "gender": "Female",
+    "category": "Eyes",
+    "value": "Cosmo Shades",
+    "punks": 3
+   },
+   {
+    "gender": "Female",
+    "category": "Clothing",
+    "value": "Prison Stripes",
+    "punks": 2
+   },
+   {
+    "gender": "Male",
+    "category": "Eyes",
+    "value": "Right Click Shades",
+    "punks": 2
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Gold Boombox",
+    "punks": 1
+   },
+   {
+    "gender": "Female",
+    "category": "Accessory",
+    "value": "Punk Necklace",
+    "punks": 1
+   },
+   {
+    "gender": "Female",
+    "category": "Body",
+    "value": "Unobtainium",
+    "punks": 1
+   },
+   {
+    "gender": "Male",
+    "category": "Accessory",
+    "value": "Frog",
+    "punks": 1
+   }
+  ]
+ },
+ "step6": [
+  {
+   "punk": 2073,
+   "gender": "Male",
+   "native": 40,
+   "diff_pixels": 0,
+   "layers": [
+    "Body='Albino' -> body_albino.png",
+    "Clothing='Pinstripe Suit' -> clothing_pinstripe_suit_male.png",
+    "Head='Purple Bandana' -> head_bandana_purple.png",
+    "Eyes='Brown' -> eyes_brown.png",
+    "Mouth='Relaxed' -> mouth_relaxed.png"
+   ],
+   "result": "PASS"
+  },
+  {
+   "punk": 3218,
+   "gender": "Male",
+   "native": 40,
+   "diff_pixels": 0,
+   "layers": [
+    "Body='Latte' -> body_latte.png",
+    "Clothing='American Flag' -> accessory_american_flag.png",
+    "Head='Black Cap' -> head_cap_black.png",
+    "Eyes='Brown' -> eyes_brown.png",
+    "Mouth='Relaxed' -> mouth_relaxed.png"
+   ],
+   "result": "PASS"
+  },
+  {
+   "punk": 9034,
+   "gender": "Male",
+   "native": 40,
+   "diff_pixels": 16,
+   "layers": [
+    "Body='Latte' -> body_latte.png",
+    "Clothing='White T' -> clothing_white_t_male.png",
+    "Head='Cowboy Hat' -> head_cowboy_brown.png",
+    "Eyes='Blue' -> eyes_blue.png",
+    "Mouth='Grin' -> female_mouth_smile.png"
+   ],
+   "result": "FAIL-DIFF"
+  },
+  {
+   "punk": 4008,
+   "gender": "Male",
+   "native": 40,
+   "diff_pixels": 12,
+   "layers": [
+    "Body='Coffee' -> body_coffee.png",
+    "Clothing='Black Tank' -> clothing_tank_black.png",
+    "Head='Blonde Mohawk' -> head_blonde_mohawk 1.png",
+    "Eyes='XCOPY' -> eyes_xcopy.png",
+    "Mouth='Grin' -> female_mouth_smile.png"
+   ],
+   "result": "FAIL-DIFF"
+  },
+  {
+   "punk": 2120,
+   "gender": "Male",
+   "native": 40,
+   "diff_pixels": 0,
+   "layers": [
+    "Body='Latte' -> body_latte.png",
+    "Clothing='White Bathrobe' -> clothing_bathrobe_white.png",
+    "Head='Black Cornrows' -> head_cornrows_black.png",
+    "Eyes='Pink' -> eyes_pink.png",
+    "Mouth='Focused' -> mouth_focused.png"
+   ],
+   "result": "PASS"
+  }
+ ],
+ "step6_note": "sample drawn from the 6692 fully resolvable punks (seed 8379)"
+}

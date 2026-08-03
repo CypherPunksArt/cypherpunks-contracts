@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CypherPunks — Contract Design, Threat Model &amp; Invariants</title>
+<style>
+  :root{--fg:#000;--muted:#555;--faint:#888;--border:rgba(0,0,0,0.12);--bg:#fff;--hl:#f4f4f2;--accent:#b8860b}
+  *{box-sizing:border-box}
+  body{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fg);background:var(--bg);max-width:880px;margin:0 auto;padding:64px 32px 120px;line-height:1.7;font-size:14px}
+  h1{font-size:26px;letter-spacing:-0.5px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:8px}
+  .meta{color:var(--faint);font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:40px;border-bottom:1px solid var(--border);padding-bottom:24px}
+  h2{font-size:18px;margin:52px 0 4px;padding-top:22px;border-top:2px solid var(--fg)}
+  h2 .n{color:var(--faint);font-weight:400;margin-right:12px}
+  h3{font-size:13px;margin:26px 0 8px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted)}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-left:22px}
+  li{margin:6px 0}
+  strong{font-weight:700}
+  em{color:var(--muted)}
+  code{background:var(--hl);padding:1px 5px;border-radius:3px;font-size:12px}
+  pre{background:var(--hl);padding:14px 16px;border-radius:4px;overflow-x:auto;font-size:12px;line-height:1.55;border:1px solid var(--border)}
+  pre code{background:none;padding:0}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:12.5px}
+  th,td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:var(--hl);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-size:10.5px}
+  .callout{background:var(--hl);border-left:3px solid var(--fg);padding:14px 18px;margin:20px 0;font-size:13px}
+  .callout.warn{border-left-color:var(--accent);background:#faf6ec}
+  .lede{font-size:15px;color:var(--muted);margin:0 0 8px}
+  .toc{background:var(--hl);padding:20px 26px;margin:32px 0 0;font-size:13px}
+  .toc ol{padding-left:20px}
+  .toc a{color:var(--fg);text-decoration:none}
+  .inv{background:var(--hl);border:1px solid var(--border);padding:10px 14px;margin:8px 0;font-size:12.5px}
+  .inv b{font-weight:700}
+  .foot{margin-top:80px;padding-top:24px;border-top:1px solid var(--border);color:var(--faint);font-size:11px}
+  @media print{body{padding:0;font-size:11px;max-width:none}h2{page-break-after:avoid}table,.callout,pre,.inv{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<h1>CypherPunks</h1>
+<div class="sub">Contract Design, Threat Model &amp; Invariants</div>
+<div class="meta">CypherPunk Labs · Rev 10 · One artifact, three jobs: build kickoff, review scope, invariant test spec</div>
+
+<p class="lede">This document specifies the contracts to be built, the exact deltas from the Nouns reference implementation, the randomness and ordering algorithms, the threat model actor by actor, and the numbered invariants the test suite and any external review must hold the system to. It implements the locked design in the Master Spec (Rev 2): flat 1/day, 9,800 public / 200 reserved (blind-drawn at genesis: 100 earmarked artist grants + 100 team, custodied by the project reserve Safe), cornerstones #1 and #10,000 guaranteed public, art public, <strong>each day's punk drawn at settlement</strong> — the daily reveal is the product's hook and nobody, including the team, can know tomorrow's punk today.</p>
+
+<div class="toc"><strong>Contents</strong>
+<ol>
+<li><a href="#constants">Constants (immutable)</a></li>
+<li><a href="#inventory">Contract Inventory &amp; Nouns Delta</a></li>
+<li><a href="#ordering">Ordering: Daily Draw at Settlement</a></li>
+<li><a href="#team">Reserved Draw &amp; Cornerstone Exclusion</a></li>
+<li><a href="#vrf">VRF Integration &amp; Lock Ordering</a></li>
+<li><a href="#auction">Auction Mechanics</a></li>
+<li><a href="#threat">Threat Model</a></li>
+<li><a href="#invariants">Invariants (testable)</a></li>
+<li><a href="#testing">Test &amp; Fork-Test Plan</a></li>
+<li><a href="#review">External Review Scope</a></li>
+<li><a href="#open">Open Inputs</a></li>
+</ol>
+</div>
+
+<!-- ==================== -->
+<h2 id="constants"><span class="n">01</span>Constants (immutable)</h2>
+
+<table>
+<thead><tr><th>Constant</th><th>Value</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>TOTAL_SUPPLY</code></td><td>10,000</td><td>Frozen trait-table length (the table lives in the Descriptor's piece pages, I12-verified); no mint outside it</td></tr>
+<tr><td><code>PUBLIC_COUNT</code></td><td>9,800</td><td>Daily-draw pool (§03); token IDs 1–9,800 mint ascending, one per settlement</td></tr>
+<tr><td><code>ARTIST_COUNT</code></td><td>100</td><td>Blind-drawn at genesis from the VRF seed (§04); token IDs 9,801–9,900</td></tr>
+<tr><td><code>TEAM_COUNT</code></td><td>100</td><td>Blind-drawn at genesis from the VRF seed (§04); token IDs 9,901–10,000</td></tr>
+<tr><td><code>CORNERSTONES</code></td><td>design pieces 1 and 10,000</td><td>Skipped by the reserved draw (§04); guaranteed public</td></tr>
+<tr><td><code>AUCTION_DURATION</code></td><td>24 hours</td><td>Chained off prior settlement, not wall clock</td></tr>
+<tr><td><code>TIME_BUFFER</code></td><td>10 minutes</td><td>Anti-snipe reset window and extension</td></tr>
+<tr><td><code>MIN_INCREMENT</code></td><td>2%</td><td>Governs whenever 2% of the current bid exceeds <code>MIN_BID_STEP</code> (i.e. above 0.05 ETH)</td></tr>
+<tr><td><code>MIN_BID_STEP</code></td><td>0.001 ETH</td><td>Absolute outbid floor: required increase = max(2%, MIN_BID_STEP). Applies to outbids only; opening bid needs only ≥ reserve. Closes the dust region where integer 2% floors to zero (Phase 3 flag 1)</td></tr>
+<tr><td><code>RESERVE_PRICE</code></td><td>0</td><td>Confirmed. The free market includes the downside</td></tr>
+<tr><td><code>PRIMARY_SPLIT</code></td><td>95 / 5 company / artist</td><td>Hardcoded in splitter</td></tr>
+<tr><td><code>ROYALTY</code></td><td>None</td><td><strong>Zero secondary royalties</strong> — no ERC-2981 in the token, no secondary fee requested anywhere. Same posture as CryptoPunks and Nouns. The artist's stream is 5% of primary across all 9,800 auctions via the splitter; the agreement's "5% of collected" secondary clause is satisfied trivially (collections are zero by design)</td></tr>
+<tr><td><code>PAUSE</code></td><td>3-of-5 Safe</td><td>Pause instant and idempotent (a re-pause cancels any scheduled unpause); unpause behind 48h timelock, executable by anyone once matured; <code>UnpauseScheduled</code> / <code>UnpauseCancelled</code> events for onchain watchers; settlement permissionless while paused</td></tr>
+<tr><td><code>NAME / SYMBOL</code></td><td>"CypherPunks" / "PUNK"</td><td>Confirmed</td></tr>
+<tr><td><code>WETH</code></td><td>mainnet canonical</td><td>Hardcoded; refund fallback (§06)</td></tr>
+</tbody>
+</table>
+
+<div class="callout">No proxy. No owner. No parameter setters. The privileged surface is <strong>two human-key-restricted roles</strong>, each set once in a constructor and never changeable: (1) the <strong>pause guardian</strong> (Safe) — <code>pause()</code> / <code>scheduleUnpause()</code> / <code>unpause()</code> as constrained above, gating only whether NEW auctions run (an in-flight auction still settles); and (2) the Splitter <strong>payeeAdmin</strong> (Safe) — <code>proposeArtistUpdate()</code> / <code>cancelArtistUpdate()</code>, which rotate the artist payee <em>address</em> behind a 48h public timelock (artist key-loss recovery, ruled 2026-07-16; SHARES stay 95/5 forever). The full privileged call set is <code>{pause, scheduleUnpause, proposeArtistUpdate, cancelArtistUpdate}</code>. Neither role can touch code, art, the draw, auction funds, or the company's immutable 95%. The <strong>one fund-redirection path</strong> is narrow and disclosed: payeeAdmin can point the artist's 5% stream at a different address, and only after 48h notice — see §Splitter and the payeeAdmin trust note. Every constant above is a compile-time constant or immutable set in the constructor. <em>Definition, for I11 and reviewers: "privileged" means human-key-restricted. Address-gated inter-contract wiring (e.g. the AuctionHouse-only mint/burn surface on the Token) is machine wiring between immutable contracts — no key, no discretion, not privilege.</em></div>
+
+<!-- ==================== -->
+<h2 id="inventory"><span class="n">02</span>Contract Inventory &amp; Nouns Delta</h2>
+
+<table>
+<thead><tr><th>Contract</th><th>Base</th><th>Keep verbatim</th><th>Strip</th><th>Add</th></tr></thead>
+<tbody>
+<tr><td><strong>AuctionHouse</strong></td><td>Nouns AuctionHouse V2</td><td>Settlement chaining; anti-snipe; <code>_safeTransferETHWithFallback</code> (30k stipend, returndata-ignoring assembly, WETH fallback) — do not improve; permissionless settle</td><td>Proxy/UUPS; owner setters (duration, reserve, increment, buffer); governance hooks; settlement price history (hammer prices live in events only; no onchain readback surface — accepted, nothing consumes it)</td><td>Constants (§01); proceeds → splitter; pause semantics (§01); mint-next from the daily draw (§03)</td></tr>
+<tr><td><strong>Token</strong></td><td>ERC-721 (OZ) + Nouns token patterns</td><td>Standard 721 surface (marketplace-clean)</td><td>Checkpointable/governance weight; delegation; ERC-2981 (zero-royalty ruling, §01)</td><td>Piece-for-token mapping recorded at mint (drawn per §03/§04); team-tail mint at genesis (§04)</td></tr>
+<tr><td><strong>Descriptor/Renderer</strong></td><td>Nouns Descriptor V2 + SSTORE2 + RLE</td><td>RLE decode; SVG composition pipeline</td><td>Art-governance/updatability — renderer locked at deploy</td><td>CypherPunks trait schema; palette; <em>blocked on pixel dims + trait-element count</em></td></tr>
+<tr><td><strong>Splitter</strong></td><td>OZ PaymentSplitter pattern (immutable)</td><td>Pull-payment share accounting</td><td>Any payee mutation</td><td>Fixed 95/5 primary; ERC-20 release retained as a strand-rescue path (the contract is immutable with no other recovery for tokens sent to it); shares constant forever</td></tr>
+</tbody>
+</table>
+
+<p><em>Statement for reviewers: this system is a deliberately near-stock Nouns fork. Review effort should concentrate on the deltas: the daily draw (§03), the reserved draw (§04), VRF lock ordering (§05), and the splitter routing. The auction mechanics are intentionally boring.</em></p>
+
+<div class="callout"><strong>Deploy ordering (pinned):</strong> the Descriptor address is an immutable constructor param on the Token — no setter exists or ever will. Mainnet deploy order is therefore Descriptor → Token → AuctionHouse, which means the Token cannot deploy before the art is final. This is not a limitation: §09 already makes the render-all fidelity test the last gate before any immutable deploy. The Descriptor address is test-only at <code>address(0)</code>; the production deploy script treats a zero value for it as a fatal validation error. (The combination-table slot was removed pre-review — the frozen trait table lives in the Descriptor's piece pages.)</div>
+
+<div class="callout"><strong>Trait schema (Rev 8, frozen — table closed):</strong> canvas <strong>40 × 40 px</strong>, native pixel grid losslessly recovered from 2000×2000 source exports (50px uniform blocks, recovery proven byte-exact per file). <strong>356 unique art elements</strong> plus one flat-colour background. Art categories and element counts: Body 26 · Clothing 102 · Head 99 · Earring 6 · Eyes 36 · Mouth 51 · Accessory 36 (the 36th is Gold Cobra, a 1/1 on piece #4705, added Rev 8 as the final trait change — see below). Gender is an element-set selector (per-gender art variants), not a rendered layer; Year is non-art metadata. Compositing z-order: <strong>Background → Body → Clothing → Head → Earring → Eyes → Mouth → Accessory</strong>. Palette: transparency is true alpha on all elements, and three mouth elements carry one semi-transparent colour each — the Phase 8 encoding must support non-binary alpha palette entries. The frozen trait table fingerprint is <code>sha256:a2cd9560a1370809e2ca663d8e011092707a090d9333de159e6ec2ce9f8fe13f</code> — the Rev 9 table, pinned by <code>src/gen/DescriptorData.sol</code>, <code>docs/art/traits/pieces.json</code>, the binding manifest, and the deploy gate. It supersedes the Rev 8 hash <code>sha256:e94b9907…</code>: Rev 9 applied approved <strong>metadata-only cleanup</strong> — Head trait relabels (word-order normalization, e.g. <em>Blowout Black → Black Blowout</em>, <em>Chromie Squiggle → Squiggle</em>) and <strong>three same-art Eyes merges</strong> (<em>Classic Shades</em>, <em>On Fire</em>, <em>Right Click Shades</em> folded into existing identical-art values), changing ~1,884 pieces' trait <em>names</em> and consolidating three redundant Eyes values (their rarity counts shift accordingly). The rendered <strong>art is unchanged</strong> — I12 renders 10,000/10,000 byte-exact against the frozen renders; no piece-count or pixel change. <strong>The table is closed:</strong> Rev 9 (approved 2026-07-16) was the last change; anything after it is a doc revision, never a quiet commit. <em>Binding rule (mandatory):</em> element-art-to-trait-value bindings are established exclusively by pixel-proven composite against the frozen renders — name matching is prohibited (a name-matched file exists in the source export that is not the rendered art). Elements without a pixel proof are excluded from the collection by construction. The full-collection composite (all 10,000, byte-exact) is the I12 activation and the last gate before deploy. <em>Display convention:</em> a punk's public identity is its token ID (assigned at mint; the daily walk issues #1–#9,800, the genesis tail #9,801–#10,000 displays GENESIS); piece indexes are internal plumbing and never render.</div>
+
+<!-- ==================== -->
+<h2 id="ordering"><span class="n">03</span>Ordering: Daily Draw at Settlement</h2>
+
+<p><strong>Design change (supersedes the Feistel full-order model):</strong> the daily order is <em>not</em> derivable from the genesis seed. Each day's punk is drawn in the settlement transaction itself, preserving the daily-reveal mystery for the full 27-year run. The genesis VRF seed now determines only the reserved 200 (§04).</p>
+
+<h3>Daily draw: lazy Fisher–Yates, without replacement</h3>
+<pre><code>// virtual pool of the 9,800 public pieces (post-reserved-removal),
+// mapping defaults mean zero initialization cost
+mapping(uint16 =&gt; uint16) private pool;
+uint16 private remaining = 9800;
+
+function _drawNext() internal returns (uint16 piece) {
+    uint256 rand = uint256(keccak256(abi.encode(
+        block.prevrandao, address(this), nextAuctionId, remaining)));
+    uint16 i = uint16(rand % remaining);
+    piece = _poolVal(i);
+    remaining--;
+    pool[i] = _poolVal(remaining);   // swap-and-pop
+    delete pool[remaining];
+}
+function _poolVal(uint16 i) private view returns (uint16 v) {
+    v = pool[i];
+    if (v == 0 &amp;&amp; !poolSet[i]) v = publicPiece[i];  // lazy default: i-th public piece
+}</code></pre>
+<ul>
+<li><em>(Reference sketch — implementation must handle the zero-value sentinel properly, e.g. store values +1, and define <code>publicPiece[i]</code> as the i-th design piece after removing the reserved 200.)</em></li>
+<li><strong>Bijection by construction:</strong> swap-and-pop sampling without replacement; every public piece drawn exactly once across 9,800 settlements.</li>
+<li><strong>O(1) per day:</strong> ~two storage slots touched per settlement.</li>
+<li><strong>Reveal timing:</strong> the piece for auction N+1 becomes knowable only inside the settlement transaction of auction N. No precomputation path exists for outsiders or the team.</li>
+<li><strong>Retrospective verifiability:</strong> every historical draw recomputes from public data (prevrandao of the settlement block, auction id, remaining count). "Check the seed" becomes "check any day."</li>
+</ul>
+
+<div class="callout warn"><strong>Randomness honesty (reviewer note):</strong> <code>prevrandao</code> is proposer-influenceable at the margin (one-bit bias per slot, or block withholding at real cost). Exploitation requires a proposer to gain from a <em>specific piece appearing on a specific day</em> — but every piece goes to an open 24-hour public auction regardless, so there is no extraction, only a seconds-early information race. This is the Nouns randomness posture, accepted deliberately. Reviewers are asked to confirm no path exists where draw timing can be combined with any other mechanism for material advantage.</div>
+
+<!-- ==================== -->
+<h2 id="team"><span class="n">04</span>Reserved Draw &amp; Cornerstone Exclusion (genesis)</h2>
+
+<p><strong>The genesis VRF seed determines exactly one thing: which 200 design pieces are reserved</strong> — via a seeded Fisher–Yates draw over the full 10,000, taking the first 200 non-cornerstone outputs (the first 100 earmarked as artist grants, the next 100 team). All 200 reserved pieces are <strong>custodied by the project reserve Safe</strong> (<code>CP_RESERVE_TREASURY</code>, commit <code>6871e40</code>) and distributed manually post-genesis — the 100 artist-grant pieces to future etch'd-marketplace artists. The artist payee receives the 5% proceeds stream only and holds no reserved tokens.</p>
+<ul>
+<li><strong>Cornerstone exclusion:</strong> design pieces 1 and 10,000 are skipped by the draw if selected; the draw continues to the next output. Deterministic, seed-derived, no human hand.</li>
+<li><strong>Per-step entropy (confirmed, encoding pinned):</strong> the reserved draw's step i uses <code>keccak256(abi.encode(seed, i))</code> — <code>abi.encode</code>, not <code>encodePacked</code>. The published reference script must mirror this byte-exact.</li>
+<li><strong>publicPiece materialization (confirmed):</strong> the 9,800-entry public-piece table is <strong>computed onchain from the seed</strong> during genesis (full 10,000-step Fisher–Yates in one call, ~9M gas measured, within the binding EIP-7825 per-transaction cap of ~16.78M) and written once as an SSTORE2 blob (~19.6&nbsp;KB, one chunk, O(1) reads). A deployer-supplied table is forbidden — it would silently defeat the blind draw. Fallback only if implementation demands: submit-and-verify (onchain recomputation + required hash equality before acceptance).</li>
+<li><strong>Genesis state machine:</strong> VRF fulfillment writes the seed only (callback gas cap). Then a strictly ordered, <em>permissionless, idempotent</em> sequence: (1) materialize publicPiece blob → (2) mint artist-grants 100 (token IDs 9,801–9,900) → (3) mint team 100 (9,901–10,000) — both tails to the reserve Safe → (4) open auction #1. Out-of-order calls revert; completed steps revert on re-call; auction #1 cannot open until all prior steps complete. This sequence is dedicated audit surface with its own test file and is replayed in the seed-ceremony rehearsal.</li>
+<li>The remaining 9,800 pieces form the public pool for the daily draw (§03). Public auction mints token IDs 1–9,800 ascending, one per settlement.</li>
+<li><strong>Publishing the seed verifies the blind reserved draw</strong> and leaks nothing about the daily order, which does not derive from it.</li>
+</ul>
+
+<div class="callout warn"><strong>Note on ID semantics:</strong> token ID = auction sequence (Nouns model). Design-piece numbers are a separate metadata attribute (<code>piece</code>). The cornerstone guarantee concerns design pieces 1 and 10,000, not token IDs. Frontend labels both (Master Spec §09).</div>
+
+<!-- ==================== -->
+<h2 id="vrf"><span class="n">05</span>VRF Integration &amp; Lock Ordering</h2>
+
+<ul>
+<li>Chainlink VRF v2.5 subscription, mainnet. <strong>One request, ever</strong> — its sole purpose is the reserved-200 draw (§04). Daily ordering never touches an oracle (§03).</li>
+<li><strong>Lock ordering by construction:</strong> the trait table (Descriptor piece pages), constants, and all algorithm code are immutable at deploy. The VRF request can only be made after deployment (it is a function of the deployed contract). Therefore no execution path exists in which the seed is known before the rules are locked.</li>
+<li><strong>Write-once, seed-only fulfillment:</strong> <code>fulfillRandomWords</code> writes the seed exactly once, guarded by a <code>seedFulfilled</code> flag (not the seed value, so a zero VRF word cannot leave the seed writable) and does nothing else (VRF v2.5 callback gas cap ≈ 2.5M — no minting, no blob work in the callback); any later fulfillment reverts. Genesis work proceeds via the permissionless state machine (§04). No function can re-request after a fulfillment (blocks seed-shopping by re-roll).</li>
+<li><strong>Stuck-request escape:</strong> if no fulfillment after <code>RE_REQUEST_TIMEOUT</code> = 7 days (timestamp-based — robust to missed-slot variance, and 7 days is beyond any meaningful timestamp manipulation), a <em>permissionless</em> <code>reRequest()</code> becomes callable — anyone, not the team, and still write-once on fulfillment. Covers VRF outage without creating a privileged re-roll.</li>
+<li><strong>Multiple-request semantics (pinned):</strong> after a <code>reRequest</code>, all outstanding request ids remain valid; the first coordinator delivery wins and every later fulfillment reverts. The alternative (newest-id-only) would let a timed <code>reRequest</code> invalidate an in-flight fulfillment, turning the escape hatch into a griefing tool. <em>Disclosed residual:</em> in the outage corner where two fulfillments are simultaneously in flight, both seeds are visible in the mempool and a block builder could choose which lands first — one bit of selection between two honest VRF outputs, affecting only the reserved draw, never the daily ordering. Accepted; reviewers asked to confirm no wider path.</li>
+<li><strong>VRF constants (pinned):</strong> <code>VRF_CALLBACK_GAS_LIMIT</code> = 100,000 (measured fulfillment 22.2k — ~4.5× headroom, far under the v2.5 2.5M cap); <code>VRF_REQUEST_CONFIRMATIONS</code> = 6; LINK-funded subscription (<code>nativePayment = false</code>). <code>keyHash</code> and subscription id are immutable constructor params — deploy-time inputs (§11).</li>
+<li>Publish the seed and a reference script at genesis so anyone can verify the reserved draw; publish the daily-draw function so anyone can verify each day retrospectively (manifesto plate 07: read the contracts, check the seed).</li>
+<li>Trust note for reviewers: Chainlink VRF operator liveness is a dependency for genesis timing only; it cannot influence <em>which</em> seed (VRF proof verified on-chain) and has no power after fulfillment.</li>
+</ul>
+
+<!-- ==================== -->
+<h2 id="auction"><span class="n">06</span>Auction Mechanics</h2>
+
+<ul>
+<li>English ascending; required outbid increase = <strong>max(2% of current bid, <code>MIN_BID_STEP</code> = 0.001 ETH)</strong>; reserve per §01. The floor applies to outbids only; the opening bid remains anything ≥ reserve (0 is valid). <em>Rationale: Solidity's integer floor makes 2% of a dust bid exactly 0, so without the floor an equal-value or 0-wei bid displaces the leader free of charge and, inside the anti-snipe buffer, extends the auction at zero cost. The floor restores the rule that every extension costs real money held at risk. Above 0.05 ETH the 2% term governs and behaviour is unchanged.</em></li>
+<li><strong>No-bid outcome (confirmed):</strong> a settlement with <em>zero bidders</em> (<code>bidder == address(0)</code>) burns the piece, Nouns-verbatim — intended contract behaviour. <strong>Note the 0-value-bid distinction (audit F5):</strong> because <code>RESERVE_PRICE = 0</code>, a 0-wei bid is a valid opening bid that <em>registers a bidder</em> and therefore <strong>prevents the burn</strong>, transferring the piece to that bidder (settlement pays no split for amount 0). This is by design and consistent with the no-reserve ethos (§01): the burn is the true no-<em>interest</em> outcome, and any 0/low bid keeps a piece alive instead. <strong>Ruling (2026-07-21):</strong> no-reserve is retained (ethos + marketing); the project runs an <em>operational backstop bidder</em> (small bid, e.g. a few cents) to claim any otherwise-unbid piece, so burns are rare in practice. The backstop is outside the trust model and appears nowhere in code or natspec; the burn path remains as the honest fallback when nothing — not even the backstop — bids.</li>
+<li><code>settleCurrentAndCreateNewAuction()</code> permissionless; each auction's clock starts at settlement of the prior (self-healing cadence; no wall-clock dependency; "day N" is frontend vocabulary).</li>
+<li>Anti-snipe: bid inside final <code>TIME_BUFFER</code> extends end time to <code>now + TIME_BUFFER</code>. Unbounded total extension (contested pieces run until bidding stops) — confirm this is intended; an optional hard cap is a one-line constant if ever desired. Default: uncapped, per site copy.</li>
+<li>Refunds: previous bidder refunded inline via <code>_safeTransferETHWithFallback</code> — 30k-gas raw call ignoring returndata, WETH transfer on failure. <strong>Copy verbatim from Nouns. Do not improve.</strong></li>
+<li>Proceeds: on settlement, full hammer price transfers to the immutable Splitter. The AuctionHouse holds only the current top bid at any moment.</li>
+<li>Pause: halts creation of the <em>next</em> auction only. In-flight bidding and settlement unaffected. Unpause behind 48h timelock.</li>
+</ul>
+
+<!-- ==================== -->
+<h2 id="threat"><span class="n">07</span>Threat Model</h2>
+
+<table>
+<thead><tr><th>Actor</th><th>Attack</th><th>Mitigation</th></tr></thead>
+<tbody>
+<tr><td>Hostile bidder contract</td><td>Revert-on-receive to block outbids (auction bricking)</td><td>Fallback never reverts the bid path; failed ETH send becomes WETH transfer (executes no recipient code)</td></tr>
+<tr><td>Hostile bidder contract</td><td>Returnbomb on refund to gas-grief the outbidder</td><td>Raw assembly call copies zero returndata; 30k stipend</td></tr>
+<tr><td>Hostile bidder contract</td><td>Reentrancy via refund into bid/settle</td><td>30k stipend insufficient for state-changing reentry; checks-effects-interactions; Foundry reentrancy suite regardless</td></tr>
+<tr><td>Deployer (us — assume hostile)</td><td>Seed-shopping: see seed, re-roll</td><td>Write-once seed; no privileged re-request; escape hatch is permissionless and still write-once (§05)</td></tr>
+<tr><td>Deployer (us — assume hostile)</td><td>Set rules after seeing seed</td><td>Impossible by construction ordering (§05); reviewers asked to verify no path exists</td></tr>
+<tr><td>Deployer (us — assume hostile)</td><td>Redirect proceeds</td><td>Splitter address immutable; no setter exists in bytecode</td></tr>
+<tr><td>Pause multisig</td><td>Censor auctions indefinitely / strand funds</td><td>Pause cannot touch in-flight settlement or funds; unpause timelocked and visible; worst case = future auctions delayed, nothing lost — accepted residual, disclosed</td></tr>
+<tr><td>Settler griefing</td><td>Nobody settles; cadence stalls</td><td>Permissionless + team keeper bot + Nouns precedent (public settles reliably); no funds at risk while unsettled</td></tr>
+<tr><td>Builder/proposer</td><td>prevrandao bias / block withholding to steer a day's draw</td><td>Every piece goes to open 24h public auction — no extraction from steering which piece appears; cost of withholding is a full block reward for zero material gain. Accepted (Nouns posture); reviewers to confirm no compounding path</td></tr>
+<tr><td>Settler-searcher</td><td>Delay settling, fishing blocks for a desired draw</td><td>Settlement is permissionless — anyone else settles meanwhile; a "won" fish still yields only a public auction. Informational advantage measured in seconds</td></tr>
+<tr><td>Bidder</td><td>Self-outbid loops / snipe-reset spam to run auctions forever</td><td>Each extension costs a real higher bid — max(2%, <code>MIN_BID_STEP</code> = 0.001 ETH) — held at risk; economically self-limiting; uncapped by design. (2% alone floors to zero below 50 wei; the MIN_BID_STEP floor closes that dust region — §06)</td></tr>
+<tr><td>Splitter payee</td><td>Reentrancy/blocking on release</td><td>Pull-payment pattern; payees fixed; release permissionless per payee</td></tr>
+<tr><td>External reviewer / audit firm</td><td>Leaks pre-deploy code or exploits</td><td>Code is public before review (brand law: code open); no privileged infra or keys exist to leak; competition-style review has no privileged access at all</td></tr>
+</tbody>
+</table>
+
+<!-- ==================== -->
+<h2 id="invariants"><span class="n">08</span>Invariants (testable)</h2>
+
+<div class="inv"><b>I1 — Bijection.</b> Across the genesis reserved draw plus all 9,800 daily draws, every design piece is assigned exactly once — no duplicates, no gaps. (Fork test: full-walk enumeration.)</div>
+<div class="inv"><b>I2 — Cornerstones public.</b> Design pieces 1 and 10,000 are never selected by the reserved draw, for any seed. (Property test across random seeds.)</div>
+<div class="inv"><b>I3 — Reserved counts exact.</b> Artist set is exactly 100 and team set exactly 100; the sets never overlap.</div>
+<div class="inv"><b>I4 — Seed write-once, draw-once.</b> After first fulfillment, no path alters the seed or re-runs the reserved draw; after each settlement, no path re-draws that day's piece.</div>
+<div class="inv"><b>I5 — Sequential mint.</b> Public token IDs mint strictly 1,2,3…9,800, one per settlement; total minted ≤ 10,000; no mint function outside auction walk + genesis tail batches.</div>
+<div class="inv"><b>I6 — One live auction.</b> Exactly one auction active at all times between genesis and final settlement (except while paused between auctions).</div>
+<div class="inv"><b>I7 — Balance integrity.</b> AuctionHouse ETH balance == current top bid after every state transition. No stranded funds, ever.</div>
+<div class="inv"><b>I8 — Settle liveness.</b> Once ended, settlement succeeds for any caller, in every reachable state, including paused, including hostile top bidder.</div>
+<div class="inv"><b>I9 — Refund liveness.</b> No refund recipient can cause a bid to revert or cost the new bidder unbounded gas. (Adversarial bidder suite.)</div>
+<div class="inv"><b>I10 — Proceeds routing.</b> Every settlement transfers exactly the hammer price to the immutable splitter; splitter shares never change.</div>
+<div class="inv"><b>I11 — Privilege surface.</b> The complete set of privileged calls is {pause, unpause-after-timelock}. Neither moves funds, changes constants, mints, or affects ordering. (Bytecode-level review item.)</div>
+<div class="inv"><b>I12 — Render fidelity.</b> tokenURI output for all 10,000 pieces is deterministic and pixel-identical to the design files. (Fork test: render all, image-diff against source PNGs.)</div>
+<div class="inv"><b>I13 — Anti-snipe correctness.</b> Late bids extend exactly to now+buffer; early bids never extend; extension requires a valid higher bid.</div>
+<div class="inv"><b>I14 — Cadence immutability.</b> No reachable state changes duration, buffer, increment (including <code>MIN_BID_STEP</code>), reserve, supply, or splitter address.</div>
+<div class="inv"><b>I15 — Reveal opacity.</b> The piece for auction N+1 is not computable by any external call before the settlement transaction of auction N executes. (Review item + test that no view function leaks the next draw.)</div>
+<div class="inv"><b>I16 — Blob fidelity.</b> The materialized publicPiece blob is byte-identical to an onchain recomputation from the seed, and no code path accepts an externally supplied table. (Fork test asserts equality; review confirms no submission path.)</div>
+<div class="inv"><b>I17 — Genesis ordering.</b> The genesis sequence (seed → blob → artist mint → team mint → auction #1) executes only in order, each step exactly once, all steps permissionless; auction #1 is unreachable until steps 1–3 complete.</div>
+
+<!-- ==================== -->
+<h2 id="testing"><span class="n">09</span>Test &amp; Fork-Test Plan</h2>
+
+<ul>
+<li><strong>Foundry invariant suite</strong> encoding I1–I14 directly; fuzzed actors (bidders, settlers, pausers) over long runs.</li>
+<li><strong>Adversarial bidder suite:</strong> revert-on-receive bot, returnbomb bot (max returndata), gas-griefer, reentrancy prober, self-outbidder, snipe-reset spammer — each asserting I8/I9/I13 hold.</li>
+<li><strong>Full-walk simulation:</strong> mainnet-fork replay of all 9,800 settlements (time-warped), asserting I5/I6/I7/I10 at every step; measures worst-case permute gas (I1 note).</li>
+<li><strong>Render-all fork test:</strong> compose all 10,000 tokenURIs on a fork; decode SVGs; pixel-diff against Jon's design files; assert I12 with zero tolerance. <em>This is the last gate before an immutable deploy.</em></li>
+<li><strong>Seed ceremony rehearsal:</strong> full deploy → VRF → reserved mint → first settlements (verify daily draws) on a fork, twice, scripted, before mainnet.</li>
+</ul>
+
+<!-- ==================== -->
+<h2 id="review"><span class="n">10</span>External Review Scope</h2>
+
+<ul>
+<li><strong>Layer 1 (continuous, internal):</strong> adversarial review + invariant suite maintained alongside every diff (this document is its spec).</li>
+<li><strong>Layer 2 (competition):</strong> Sherlock / Code4rena / Cantina style contest. Scope: the Nouns deltas — §03 daily draw, §04 reserved draw, §05 VRF ordering, splitter routing, pause semantics. Provided artifacts: this doc, the repo, the invariant suite. Severity anchors: anything violating I1–I14 is High by definition.</li>
+<li><strong>Layer 3 (optional, boutique firm):</strong> one pass for the public letter; scheduled only if budget and calendar allow.</li>
+<li><strong>Timing:</strong> genesis date must sit after Layer 2 completion. The public countdown is a placeholder until this calendar is real — do not let the clock ship unreviewed immutable code.</li>
+</ul>
+
+<!-- ==================== -->
+<h2 id="open"><span class="n">11</span>Open Inputs</h2>
+
+<ol>
+<li><s>Punk pixel dimensions and unique trait-element count (unblocks Descriptor build and exact deploy-gas figures).</s> — resolved Rev 7 (updated Rev 8): 40×40 canvas, 356 elements + flat background, schema pinned in the §02 trait-schema callout with the frozen fingerprint <code>e94b9907…</code>.</li>
+<li><s>Reserve 0, increment 2%</s> — confirmed, then amended Rev 2: increment floored by <code>MIN_BID_STEP</code> = 0.001 ETH (§01/§06, Phase 3 flag 1). Uncapped anti-snipe stands unless vetoed.</li>
+<li><s>Confirm secondary royalty % and splitter shares against the artist agreement ("collected" wording — Master Spec §08).</s> — resolved Rev 3: agreement confirmed as 5% of <em>collected</em> royalties; ruling is <strong>zero secondary royalties</strong>, ERC-2981 removed from the token (§01). Primary 95/5 unchanged and is the artist's stream.</li>
+<li><s>Artist and team distribution addresses for the genesis tail mints</s> — resolved (commit <code>6871e40</code>): both tails mint to the single project reserve Safe (<code>CP_RESERVE_TREASURY</code>); manual distribution post-genesis. Affects nothing structural.</li>
+<li>Chainlink <code>keyHash</code> and VRF subscription id — deploy-time constructor params (§05).</li>
+<li>Genesis date decision once Layer 2 review is scheduled.</li>
+</ol>
+
+<div class="foot">
+CypherPunks Contract Design, Threat Model &amp; Invariants · Rev 10 · companion to Master Spec Rev 2 and the Auction Tech Spec.<br>
+Rev 10 (Jul 21, 2026): reconciles the doc with post-anchor reality (audit warm pass F1–F4). (a) Splitter gained a <em>rotatable artist payee</em> behind a 48h timelock held by an immutable payeeAdmin Safe (key-loss recovery, ruled 2026-07-16); the privileged set is restated truthfully as {pause, scheduleUnpause, proposeArtistUpdate, cancelArtistUpdate} and the "only privileged function is pause" claim retired — I11's machine-enumeration expectation updated to match. (b) payeeAdmin trust surface disclosed: it can redirect ONLY the artist's 5% (future + accrued-unclaimed), never the company's 95%. Per the single-Safe ruling (2026-07-20) payeeAdmin MAY equal the company — one 3-of-5 team Safe holds both, so the team can rotate the artist payee behind the 48h timelock (a disclosed key-loss-recovery power, not an unprivileged path). The constructor permits this and forbids only payeeAdmin == artist; F4 is resolved by disclosure, not a guard. (c) Trait-table fingerprint reconciled e94b9907… (Rev 8) → a2cd9560… (Rev 9): this reflects <em>approved Rev 9 metadata cleanup</em> — Head relabels + 3 same-art Eyes merges, ~1,884 piece names; art byte-identical per I12 — NOT a re-serialization as audit F3 assumed (F3). (d) Stale natspec fixed: Splitter ERC-2981 note (royalties removed Rev 3), Descriptor RLE bound 303→327. (e) F5 ruled: no-reserve retained (ethos/marketing); a 0-value bid legally prevents the burn, and an operational backstop bidder claims otherwise-unbid pieces (burns rare in practice; burn path kept as fallback) — §06 clarified. Review re-anchored — see SCOPE.md.<br>
+Rev 9 (Jul 9, 2026): dead combinationTable immutable removed from the Token pre-review (design consolidated Rev 7/8: the frozen trait table lives in the Descriptor's piece pages, I12-verified) — §01 TOTAL_SUPPLY note, §02 Token row, §02 deploy-ordering callout and §05 lock-ordering re-anchored accordingly; validator's combination-table check dropped. Review anchor 9e0483fe.<br>
+Rev 8 (Jul 8, 2026): gold cobra added as the 36th Accessory element — a 1/1 on piece #4705 (Cobra 10→9, #4705 rank 837→318, top unchanged at #7648). Table CLOSED, no further trait changes. New frozen fingerprint e94b9907… replaces 4e19f6cc… (§02); element count 355→356, Accessory 35→36. Descriptor data, I12 renders, binding manifest and frontend artifacts regenerated against the new table.<br>
+Rev 7 (Jul 8, 2026): trait schema pinned — 40×40 canvas, 355 elements, categories, z-order, semi-alpha budget, frozen fingerprint 4e19f6cc…; pixel-proven binding rule mandatory (name matching prohibited); token-ID display convention recorded; §02 art-inputs callout extended to combination table; §11 art input resolved.<br>
+Rev 6 (Jul 6, 2026): deploy ordering pinned — Descriptor → Token → AuctionHouse, descriptor immutable constructor param, no setter, zero descriptor fatal in production validate (§02). Phase 7 flags 2 and 3 confirmed; Sepolia real-VRF dress rehearsal added to pre-genesis ops.<br>
+Rev 5 (Jul 6, 2026): privilege definition pinned for I11 — human-key-restricted; address-gated inter-contract wiring is not privilege (§01 callout). Phase 6 flags 2 and 3 confirmed as built.<br>
+Rev 4 (Jul 6, 2026): Phase 5 pins — RE_REQUEST_TIMEOUT = 7 days timestamp-based; first-delivery-wins multiple-request semantics with the dual-fulfillment mempool residual disclosed; VRF constants pinned (callback 100k, confirmations 6, LINK-funded); keyHash/subId added to deploy-time inputs (§05/§11).<br>
+Rev 3 (Jul 6, 2026): zero secondary royalties ruled — ERC-2981 removed from the token (§01/§02); splitter's ERC-20 release reframed as strand rescue (§02); open input 3 resolved. Phase 4 flags 1 and 2 confirmed as built.<br>
+Rev 2 (Jul 6, 2026): Phase 3 flag rulings — MIN_BID_STEP outbid floor (§01/§06/§07, I14); no-bid burn confirmed with backstop noted as operational only (§06); reserved-draw entropy pinned to <code>abi.encode</code> (§04); pause semantics recorded (§01); settlement price history strip recorded (§02); permutation-era staleness tidied (TOC, §01, §02, §10).<br>
+Engineering reference. Not legal, tax, or financial advice.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+45e9b6e38a (last commit before V2 removal: 'natspec')
+OZ v4.9.6 PaymentSplitter (removed in OZ v5; pattern reference for Splitter.sol)
+chainlink v2.24.0 contracts/src/v0.8/vrf/dev/ — VRF v2.5 client lib, coordinator interface, consumer base (base NOT inherited in src/: it pulls in ConfirmedOwner)
