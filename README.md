@@ -58,7 +58,10 @@ external reviews.
 - `script/` — deploy scripts that reproduce genesis
 - `docs/INVARIANTS.md` — the invariant catalog, including the accepted
   findings and their bounds
-- `docs/THE-MANUAL.md` — the user manual, also inscribed onchain
+- `script/manual.txt` — the user manual inscribed onchain, byte-identical to
+  the 2,027 bytes stored at `0xef499B5559E520B5144d08b9142dD8614D824A94`
+- `docs/THE-MANUAL.md` — the longer companion manual (not the inscription; it
+  carries errata for the two places the inscription is incomplete)
 - `docs/art/` — the frozen art artifacts and their fingerprints
 - `reference/` — vendored upstream sources (Nouns, OpenZeppelin, Chainlink),
   provenance in `VENDORED_FROM.txt`
