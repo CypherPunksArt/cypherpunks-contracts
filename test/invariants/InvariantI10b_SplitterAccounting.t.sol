@@ -41,6 +41,15 @@ contract InvariantI10b_SplitterAccounting is Test {
         assertLe(split.totalReleased(), handler.ghostReceived(), "released exceeds received");
     }
 
+    /// CP-LIVE-05: the run is only meaningful if the actions actually landed.
+    /// Before this, artist/designer releases reverted in nearly every call and
+    /// the suite still reported the coverage as exercised.
+    function afterInvariant() public view {
+        assertGt(handler.fundCount(), 0, "no funding landed");
+        assertGt(handler.releaseCount(), 0, "no release landed");
+        assertGt(handler.rotateCount(), 0, "no rotation matured");
+    }
+
     /// No role is ever paid more than its cumulative 90 / 5 / 5 entitlement.
     function invariant_NoRoleOverpaid() public view {
         uint256 received = handler.ghostReceived();
