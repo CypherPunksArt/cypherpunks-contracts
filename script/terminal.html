@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYPHERPUNKS AUCTION TERMINAL</title>
+<style>
+:root{--bg:#000;--ink:#e8e8e8;--soft:#9a9a9a;--faint:#5c5c5c;--rule:rgba(255,255,255,.18);--rule-soft:rgba(255,255,255,.08);--dim:#0d0d0d;--warn:#ffb454;--bad:#ff6b6b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:13px;line-height:1.7;padding:34px 18px 60px;display:flex;justify-content:center}
+.term{width:100%;max-width:680px}
+.hd{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+.hd svg{flex:0 0 auto}
+.hd .t{font-weight:700;letter-spacing:3px;font-size:13px;color:var(--ink)}
+.hd .s{font-size:10px;letter-spacing:2px;color:var(--faint);margin-top:2px}
+.ln{font-size:10px;letter-spacing:1.5px;color:var(--faint);padding:10px 0;border-bottom:1px solid var(--rule-soft)}
+.ln b{color:var(--soft);font-weight:500}
+.row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+.k{font-size:10px;letter-spacing:2.5px;color:var(--faint);flex:0 0 auto}
+.v{color:var(--ink);text-align:right;word-break:break-all;font-variant-numeric:tabular-nums}
+.v.hot{font-weight:700}
+.big{font-size:26px;font-weight:700}
+.punk{margin:22px 0 6px;border:1px solid var(--rule);background:var(--dim);border-radius:4px;overflow:hidden}
+.punk img{width:100%;display:block;image-rendering:pixelated;min-height:120px}
+.cap{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:2px;color:var(--faint);padding:10px 0 2px}
+.cap .live{color:var(--ink)}
+.sec{margin-top:26px}
+.sec-t{font-size:10px;letter-spacing:3px;color:var(--ink);font-weight:700;margin-bottom:4px}
+.sec-n{font-size:11px;color:var(--soft);margin-bottom:10px;line-height:1.8}
+.code{border:1px solid var(--rule);border-radius:4px;background:#0a0a0a;padding:10px 12px;margin:8px 0;font-size:11px;word-break:break-all;position:relative;color:var(--ink)}
+.code .lbl{font-size:9px;letter-spacing:2px;color:var(--faint);display:block;margin-bottom:3px}
+.code .sub{font-size:9.5px;color:var(--faint);display:block;margin-top:3px}
+.code .cp{position:absolute;top:8px;right:10px;font-size:9px;letter-spacing:1.5px;color:var(--ink);background:none;border:1px solid var(--rule);border-radius:3px;padding:2px 7px;cursor:pointer;font-family:inherit}
+.code .cp:hover{background:var(--dim)}
+.code .cp.fail{color:var(--bad);border-color:var(--bad)}
+.rpcbar{display:flex;gap:8px;margin:16px 0 4px;flex-wrap:wrap}
+.rpcbar input{flex:1;min-width:200px;background:transparent;border:1px solid var(--rule);border-radius:4px;color:var(--ink);font-family:inherit;font-size:11px;padding:8px 10px;outline:none}
+.rpcbar input:focus{border-color:var(--ink)}
+.rpcbar button,.lockbtn{background:var(--ink);color:#000;border:none;border-radius:4px;font-family:inherit;font-size:10px;font-weight:700;letter-spacing:2px;padding:10px 16px;cursor:pointer}
+.rpcbar button:hover,.lockbtn:hover{opacity:.85}
+.lockbtn{display:none;width:100%;margin:12px 0 2px}
+.rpc-note{font-size:9.5px;letter-spacing:1px;color:var(--faint);margin-bottom:6px;line-height:1.8}
+.err{color:var(--bad);font-size:11px;padding:8px 0;display:none}
+.note{color:var(--warn);font-size:10px;letter-spacing:1px;padding:6px 0;display:none}
+.warnbox{display:none;border:1px solid var(--warn);border-radius:4px;color:var(--warn);font-size:10.5px;letter-spacing:.5px;padding:10px 12px;margin:10px 0;line-height:1.8}
+.gate{display:none;border:1px solid var(--rule);border-radius:4px;padding:14px;margin:14px 0;font-size:11px;color:var(--soft);line-height:1.8}
+.gate button{display:block;margin-top:10px;background:none;border:1px solid var(--rule);border-radius:4px;color:var(--ink);font-family:inherit;font-size:10px;letter-spacing:2px;padding:8px 14px;cursor:pointer}
+.gate button:hover{background:var(--dim)}
+.snap{font-size:9.5px;letter-spacing:1px;color:var(--faint);padding:6px 0;line-height:1.8}
+.rec-life{font-size:9.5px;letter-spacing:1.5px;color:var(--warn);padding:2px 0 6px}
+.foot{margin-top:34px;padding-top:14px;border-top:1px solid var(--rule);font-size:9.5px;letter-spacing:1px;color:var(--faint);line-height:2}
+.foot b{color:var(--soft);font-weight:500}
+.blink{animation:bl 1.2s steps(2) infinite}
+@keyframes bl{to{visibility:hidden}}
+@media(max-width:520px){.big{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="term">
+<div class="hd">
+<svg viewBox="0 0 117 117" width="30" height="30" aria-hidden="true"><path fill="#e8e8e8" d="M47 70H23V117H94V70H70V94H47V70Z"/><path fill="#e8e8e8" d="M0 70H23V47H47V70H70V47H94V70H117V23H94V0H23V23H0V70Z"/></svg>
+<div>
+<div class="t">CYPHERPUNKS AUCTION TERMINAL</div>
+<div class="s">STORED ON ETHEREUM. NEEDS ONLY AN RPC.</div>
+</div>
+</div>
+<div class="ln">// ONE PUNK A DAY FOR 27 YEARS. NO RESERVE. <b>THE NEXT OPENS ON SETTLEMENT, UNLESS THE GUARDIAN HAS PAUSED FUTURE AUCTIONS.</b></div>
+<div class="rpcbar">
+<input id="rpc" spellcheck="false" placeholder="your own RPC (recommended)">
+<button onclick="rf()">READ CHAIN</button>
+</div>
+<div class="rpc-note">Safest: your own node (http://localhost:8545). Quorum counts ONLY the three
+built-in endpoints, assumed distinct operators — a custom endpoint never adds
+a vote: it is compared, or used alone via explicit consent.</div>
+<div class="err" id="err"></div>
+<div class="warnbox" id="mismatch">YOUR RPC DISAGREES WITH THE PUBLIC ENDPOINTS. One is wrong or stale — do not
+send funds until you know which.</div>
+<div class="punk"><img id="art" alt="punk" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="></div>
+<div class="cap"><span id="cap-l">READING…</span><span id="cap-r" class="live"></span></div>
+<div id="state">
+<div class="row"><span class="k">DAY</span><span class="v hot big" id="day">—</span></div>
+<div class="row"><span class="k">CURRENT BID</span><span class="v big" id="bid">—</span></div>
+<div class="row"><span class="k">HIGH BIDDER</span><span class="v" id="bidder">—</span></div>
+<div class="row"><span class="k">ENDS IN</span><span class="v hot big" id="clock">—</span></div>
+<div class="row"><span class="k">STATUS</span><span class="v" id="status">—</span></div>
+</div>
+<div class="snap" id="snap"></div>
+<div class="note" id="rec-note"></div>
+<div class="gate" id="gate">
+<b>TRANSACTION FIELDS UNAVAILABLE — STATE NOT CONFIRMED BY DISTINCT ORIGINS.</b><br>
+One origin supplied this state. It alone sets the bid minimum, the clock that
+decides bid versus settle, and the art. Confirm against a second source before
+sending. Consent covers this endpoint, this state and this action, it expires after
+five minutes, and it resets when any of them changes.
+<button onclick="gc()">I UNDERSTAND — ALLOW THIS SOURCE</button>
+</div>
+<button class="lockbtn" id="lock-bid" onclick="lock('bid')">READ CHAIN &amp; LOCK BID RECIPE</button>
+<button class="lockbtn" id="lock-settle" onclick="lock('settle')">READ CHAIN &amp; LOCK RECIPE</button>
+<div class="sec" id="bid-sec" style="display:none">
+<div class="sec-t">// LOCKED BID RECIPE — FROM ANY WALLET</div>
+<div class="rec-life" id="bid-life"></div>
+<div class="sec-n">Frozen together from one verified snapshot — use as a set, never mix with older
+or newer values. Any wallet that attaches hex data works. Outbid funds
+return automatically. A bid, reorg, or slow inclusion can
+invalidate this recipe early — simulate right before sending.</div>
+<div class="warnbox" style="display:block">NETWORK — ETHEREUM MAINNET ONLY · CHAIN ID 1<br>Check your wallet's network before you confirm. These fields sent on another
+chain can succeed there and lose the funds; nothing reaches this auction.</div>
+<div class="code"><span class="lbl">TO — THE AUCTION HOUSE</span><span id="c-to"></span><button class="cp" onclick="cp('c-to',this)">COPY</button></div>
+<div class="code"><span class="lbl" id="c-val-lbl"></span><span id="c-val"></span><span class="sub" id="c-val-wei"></span><button class="cp" onclick="cp('c-val',this)">COPY</button></div>
+<div class="code"><span class="lbl" id="c-data-lbl"></span><span id="c-data"></span><button class="cp" onclick="cp('c-data',this)">COPY</button></div>
+</div>
+<div class="sec" id="settle-sec" style="display:none">
+<div class="sec-t">// LOCKED SETTLE RECIPE — ANYONE MAY SEND IT</div>
+<div class="rec-life" id="settle-life"></div>
+<div class="sec-n" id="settle-note"></div>
+<div class="warnbox" style="display:block">NETWORK — ETHEREUM MAINNET ONLY · CHAIN ID 1<br>Check your wallet's network before you confirm.</div>
+<div class="code"><span class="lbl">TO — THE AUCTION HOUSE</span><span id="s-to"></span><button class="cp" onclick="cp('s-to',this)">COPY</button></div>
+<div class="code"><span class="lbl" id="s-data-lbl"></span><span id="s-data"></span><button class="cp" onclick="cp('s-data',this)">COPY</button></div>
+</div>
+<div class="ln">// A BID IN THE FINAL TEN MINUTES RESETS THE CLOCK TO TEN MINUTES. THE AUCTION ENDS WHEN THE COLLECTORS STOP.</div>
+<div class="foot">
+AUCTION HOUSE <b>0x6f99cb3d3A3c10bDAA52204509f3d85F4697f1B8</b><br>
+TOKEN <b>0xA38ab198BE78d7Adf45652c522Cc6B4b8010520a</b><br>
+DESCRIPTOR — RENDERS THE ART <b>0xF5303966F5FaD1D395ec96458DBb26876953f268</b><br>
+PFP REGISTRY <b>0xcb3bA744322f9870F03331e0c25224CA775b1565</b><br>
+MAILING LIST <b>0x5a9222764095d1D2400C4D5D3070bF907FaF6102</b><br>
+USER MANUAL <b>0xef499B5559E520B5144d08b9142dD8614D824A94</b><br>
+SPLITTER <b>0x5562dcEb25e84a9EA4c244EC02A74C8c14f8B9e1</b><br><br>
+ART &amp; METADATA render from the chain via tokenURI.<br>
+Addresses and selectors above are baked in — no RPC can change them.<br>
+<span id="self-ref">THIS PAGE — retrievable forever: eth_call <b>ui()</b> at <b>__TERMINAL_ADDRESS__</b>.</span>
+</div>
+</div>
+<script>
+'use strict';
+var AH='0x6f99cb3d3A3c10bDAA52204509f3d85F4697f1B8';
+var TOKEN='0xA38ab198BE78d7Adf45652c522Cc6B4b8010520a';
+var SEL={auction:'0x7d9f6db5',tokenURI:'0xc87b56dd',createBid:'0x659dd2b4',settle:'0xf25efffc',settlePaused:'0xa4d0a17e',paused:'0x5c975abb'};
+var RPCS=['https://ethereum-rpc.publicnode.com','https://mainnet.gateway.tenderly.co','https://eth-mainnet.public.blastapi.io'];
+var STEP=1000000000000000n;
+var STTL=90000,RTTL=60000,CTTL=300000;
+var HEXRE=/^0x[0-9a-f]+$/i;
+var PH='data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+var RV='RECIPE VOID — ',CP='CYPHERPUNK #',AF=' — ART READ FAILED, RETRY';
+var snap=null,rcp=null,cns=null,cust=null;
+var gen=0,aG=0,aSt={key:'',ok:false},chainOk={};
+function $(id){return document.getElementById(id)}
+function set(id,t){$(id).textContent=t}
+function show(id,on){$(id).style.display=on?'block':'none'}
+function err(m){set('err',m||'');show('err',!!m)}
+function note(m){set('rec-note',m||'');show('rec-note',!!m)}
+var W0=Date.now()-performance.now();
+/* sleep ages state; a rewound clock cannot un-age */
+function mono(){return Math.max(performance.now(),Date.now()-W0)}
+function pad(n){return n.toString(16).padStart(64,'0')}
+function post(rpc,method,params){
+var c=new AbortController();var t=setTimeout(function(){c.abort()},6000);
+return fetch(rpc,{method:'POST',redirect:'error',headers:{'Content-Type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:method,params:params}),signal:c.signal})
+.then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json()})
+.then(function(j){if(j.error)throw new Error(j.error.message||'rpc error');return j.result})
+.finally(function(){clearTimeout(t)})}
+function hex(v,len){if(typeof v!=='string'||!HEXRE.test(v)||(len&&v.length!==len))throw new Error('malformed hex');return v.toLowerCase()}
+function callAt(rpc,to,data,tag){return post(rpc,'eth_call',[{to:to,data:data},tag]).then(function(r){return hex(r)})}
+function ident(u){try{
+var x=new URL(u);
+if(x.username||x.password||x.hash)return null;
+var lb=x.hostname==='localhost'||x.hostname==='127.0.0.1'||x.hostname==='[::1]';
+if(x.protocol!=='https:'&&!(x.protocol==='http:'&&lb))return null;
+return x.host.toLowerCase()
+}catch(e){return null}}
+function rs(rpc){
+var chain=chainOk[rpc]?Promise.resolve():post(rpc,'eth_chainId',[]).then(function(r){if(parseInt(hex(r),16)!==1)throw new Error('not mainnet');chainOk[rpc]=true});
+var bn,ts,tr;
+return chain.then(function(){return post(rpc,'eth_getBlockByNumber',['latest',false])})
+.then(function(b){
+if(!b)throw new Error('no block');
+tr=mono();
+bn=parseInt(hex(b.number),16);ts=parseInt(hex(b.timestamp),16);
+if(!(ts>1600000000&&ts<4102444800))throw new Error('timestamp out of range');
+var tag='0x'+bn.toString(16);
+return Promise.all([callAt(rpc,AH,SEL.auction,tag),callAt(rpc,AH,SEL.paused,tag)])})
+.then(function(r){
+var a=hex(r[0],2+7*64),p=hex(r[1],66);
+var w=function(i){return a.slice(2+i*64,2+(i+1)*64)};
+if(w(5).slice(0,24)!=='000000000000000000000000')throw new Error('bad bidder word');
+var st=parseInt(w(6),16),pz=parseInt(p.slice(2),16);
+if(st>1||pz>1)throw new Error('bad boolean word');
+if(BigInt('0x'+w(2))>=(1n<<128n))throw new Error('amount out of range');
+if(parseInt(w(0),16)>1e7||parseInt(w(3),16)>=2**40||parseInt(w(4),16)>=2**40)throw new Error('field out of range');
+return {rpc:rpc,auction:a,paused:pz===1,bn:bn,ts:ts,tr:tr,key:a+'|'+pz}})}
+function median(x){var s=x.slice().sort(function(a,b){return a-b});return s[s.length>>1]}
+function fcl(m){snap=null;kr(rcp?RV+'NO VERIFIED STATE':'');err(m);rd()}
+function fin(ch,vt,qm,t0){
+var a=ch[0].auction;
+var w=function(i){return a.slice(2+i*64,2+(i+1)*64)};
+var cur={tokenId:parseInt(w(0),16),amount:BigInt('0x'+w(2)),startTime:parseInt(w(3),16),endTime:parseInt(w(4),16),bidder:'0x'+w(5).slice(24),settled:parseInt(w(6),16)===1,paused:ch[0].paused};
+cur.hasBid=BigInt(cur.bidder)!==0n;
+var tss=ch.map(function(o){return o.ts});
+var hi=Math.max.apply(null,tss);
+var loK=Math.min.apply(null,ch.map(function(o){return o.ts-o.tr/1000}));
+snap={cur:cur,key:ch[0].key,at:t0,loK:loK,tsHi:hi,
+q:qm,agree:ch.length,total:vt.length||1,
+srcs:ch.map(function(o){return o.rpc})};
+if(rcp&&rcp.key!==snap.key)kr(RV+'STATE CHANGED');
+err('');cmp();rd();ag(false)}
+function rf(){
+var g=++gen,t0=mono();cust=null;cmp();
+var custom=$('rpc').value.trim();
+if(custom&&!ident(custom)){fcl('BAD RPC URL — https only (http on localhost), no #fragment or credentials.');return Promise.resolve(false)}
+var seen={},builtins=[];
+RPCS.forEach(function(u){var id=ident(u);if(id&&!seen[id]){seen[id]=1;builtins.push(u)}});
+var hasCustom=!!(custom&&!seen[ident(custom)]);
+var customP=hasCustom?rs(custom).then(function(c){return c},function(){return null}):Promise.resolve(null);
+customP.then(function(c){if(g===gen){cust=c;cmp()}});
+return Promise.allSettled(builtins.map(rs)).then(function(rs){
+if(g!==gen)return false;
+try{
+var vt=[];rs.forEach(function(r){if(r.status==='fulfilled')vt.push(r.value)});
+var groups={};vt.forEach(function(o){(groups[o.key]=groups[o.key]||[]).push(o)});
+var sizes=Object.keys(groups).map(function(k){return groups[k]}).sort(function(x,y){return y.length-x.length});
+var best=sizes[0]||[],second=sizes[1]?sizes[1].length:0;
+var tg=best;
+if(best.length){
+var med=median(best.map(function(o){return o.ts}));
+tg=best.filter(function(o){return Math.abs(o.ts-med)<=900});
+if(tg.length===2&&(Math.abs(tg[0].ts-tg[1].ts)>90||Math.abs(tg[0].bn-tg[1].bn)>8))tg=[];
+}
+var qm=tg.length>=2&&tg.length>second&&tg.length*2>vt.length;
+if(qm){
+var wk=tg[0].key,hb=Math.min.apply(null,tg.map(function(o){return o.bn}));
+if(vt.some(function(o){return o.key!==wk&&o.bn>=hb})){fcl('NEWER STATE AT ANOTHER ORIGIN — RE-READ.');return false}
+fin(tg,vt,true,t0);return true}
+return customP.then(function(c){
+if(g!==gen)return false;
+var pick=c||(vt.length===1?vt[0]:null);
+if(!pick){fcl(vt.length?'ORIGINS DISAGREE — NO VERIFIED STATE.':'NO RPC ANSWERED — enter an endpoint.');return false}
+fin([pick],vt,false,t0);
+return true})
+}catch(e){fcl('READ ERROR — '+(e&&e.message?e.message:e));return false}})}
+function cmp(){show('mismatch',!!(cust&&snap&&snap.q&&cust.key!==snap.key))}
+function fS(){return snap&&(mono()-snap.at)<=STTL}
+function actK(){var a=acts(snap.cur);return a.bid+'|'+a.settle}
+function hc(){return cns&&snap&&cns.key===snap.key&&cns.rpc===snap.srcs[0]&&cns.act===actK()&&mono()-cns.at<CTTL}
+function gc(){if(snap){cns={key:snap.key,rpc:snap.srcs[0],act:actK(),at:mono()};aSt={key:'',ok:false};ag(false)}rd()}
+$('rpc').addEventListener('input',function(){cns=null;aSt={key:'',ok:false};$('art').src=PH;kr(rcp?RV+'RPC CHANGED':'');rd()});
+function ag(force){
+if(!snap||snap.cur.startTime===0)return Promise.resolve(false);
+var k=snap.cur.tokenId+'|'+snap.srcs.join(',');
+if(!force&&k===aSt.key&&aSt.ok)return Promise.resolve(true);
+if(k!==aSt.key){aSt={key:k,ok:false};$('art').src=PH}
+var g=++aG,tid=snap.cur.tokenId,ver=snap.srcs.length>=2;
+function bad(m){$('art').src=PH;aSt={key:k,ok:false};set('cap-l',m);rd();return false}
+return Promise.allSettled(snap.srcs.map(function(u){return callAt(u,TOKEN,SEL.tokenURI+pad(tid),'latest')})).then(function(rs){
+if(g!==aG||!snap||snap.cur.tokenId!==tid)return false;
+var vals=[];rs.forEach(function(r){if(r.status==='fulfilled')vals.push(r.value)});
+if(ver){
+if(vals.length<2)return bad(CP+tid+AF);
+for(var i=1;i<vals.length;i++)if(vals[i]!==vals[0])return bad(CP+tid+' — ART MISMATCH, NOT SHOWN');
+}else{
+if(!vals.length)return bad(CP+tid+AF);
+if(!hc())return bad(CP+tid+' — ART UNVERIFIED, HIDDEN');
+}
+try{
+var b=vals[0].slice(2);
+var off=parseInt(b.slice(0,64),16)*2;
+var n=parseInt(b.slice(off,off+64),16)*2;
+if(!n||off+64+n>b.length)throw 0;
+var hx=b.slice(off+64,off+64+n),s='';
+for(var j=0;j<hx.length;j+=2)s+=String.fromCharCode(parseInt(hx.substr(j,2),16));
+if(s.indexOf('data:application/json;base64,')!==0)throw 0;
+var meta=JSON.parse(atob(s.slice(29)));
+if(typeof meta.image!=='string'||meta.image.indexOf('data:image/svg+xml;base64,')!==0)throw 0;
+if(atob(meta.image.slice(26)).indexOf('<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" ')!==0)throw 0;
+$('art').src=meta.image;
+aSt={key:k,ok:true};
+set('cap-l',(typeof meta.name==='string'?meta.name:'CypherPunk #'+tid).toUpperCase()+(ver?'':' · ART UNVERIFIED'));
+rd();
+return true
+}catch(e){return bad(CP+tid+AF)}})}
+function fmtE(wei){var s=wei.toString().padStart(19,'0');var wh=s.slice(0,-18),f=s.slice(-18).replace(/0+$/,'');return wh+(f?'.'+f:'')}
+function short(a){return a.slice(0,6)+'…'+a.slice(-4)}
+function el(){return Math.max(0,Math.floor((mono()-snap.at)/1000))}
+function loNow(){return Math.floor(snap.loK+mono()/1000)}
+function hiNow(){return snap.tsHi+el()}
+function acts(cur){
+if(cur.settled||cur.startTime===0)return{bid:false,settle:false,unsure:false};
+var bid=cur.endTime>hiNow(),settle=cur.endTime<=loNow();
+return{bid:bid,settle:settle,unsure:!bid&&!settle}}
+function lock(kind){
+rf().then(function(ok){
+if(!ok||!fS()){note('LOCK FAILED — READ FAILED, RETRY');return}
+if(!snap.q&&!hc()){note('LOCK FAILED — STATE UNCONFIRMED, RETRY');return}
+var s0=snap,ac=acts(s0.cur);
+if(kind==='bid'&&ac.bid){
+ag(true).then(function(av){
+if(!av){note('LOCK FAILED — ART UNVERIFIED, RETRY');return}
+if(snap!==s0||!fS()||!aOk()||!acts(s0.cur).bid){note('LOCK FAILED — STATE MOVED, RETRY');return}
+var cur=s0.cur,val,sub,lbl;
+if(cur.hasBid){
+var pct=cur.amount*2n/100n;
+var min=cur.amount+(pct>STEP?pct:STEP);
+lbl='VALUE — EXACT MINIMUM NOW (ETH)';val=fmtE(min);
+sub='= '+min.toString()+' wei. A competing bid raises this at any moment — simulate before sending.';
+}else{lbl='VALUE — OPENING BID (ETH)';val='0';
+sub='Valid ONLY while nobody has bid — an earlier landing bid makes this revert. Simulate first.'}
+rcp={kind:'bid',key:s0.key,tokenId:cur.tokenId,until:Math.min(mono()+RTTL,mono()+Math.max(0,cur.endTime-hiNow())*1000),data:SEL.createBid+pad(cur.tokenId)};
+set('c-to',AH);set('c-val-lbl',lbl);set('c-val',val);set('c-val-wei',sub);
+set('c-data-lbl','DATA — createBid('+cur.tokenId+')');set('c-data',rcp.data);
+note('');rd()});
+}else if(kind==='settle'&&ac.settle){
+var cur2=s0.cur;
+rcp={kind:'settle',key:s0.key,tokenId:cur2.tokenId,until:mono()+RTTL,data:cur2.paused?SEL.settlePaused:SEL.settle};
+set('s-to',AH);
+set('s-data-lbl',cur2.paused?'DATA — settleAuction() [AUCTION HOUSE IS PAUSED]':'DATA — settleCurrentAndCreateNewAuction()');
+set('s-data',rcp.data);
+set('settle-note',(cur2.paused?'Paused: settleAuction() settles without opening the next auction. Zero value.':'Transfers the punk to the winner and opens the next auction. Zero value, any wallet.')+' If another account settles first, this reverts.');
+note('');rd();
+}else{note('LOCK FAILED — ACTION STATE CHANGED, RETRY')}})}
+function kr(m){rcp=null;show('bid-sec',false);show('settle-sec',false);if(m)note(m)}
+function aOk(){return snap&&aSt.ok&&aSt.key===snap.cur.tokenId+'|'+snap.srcs.join(',')}
+function rd(){
+if(!snap){
+set('cap-r','');set('status','NO VERIFIED STATE');$('status').className='v';
+['day','bid','bidder'].forEach(function(id){set(id,'—')});
+set('clock','--:--:--');set('snap','');
+show('gate',false);show('lock-bid',false);show('lock-settle',false);
+kr('');return}
+var cur=snap.cur;
+if(cur.startTime===0){
+set('day','—');set('bid','—');set('bidder','—');set('clock','--:--:--');
+set('status','AUCTIONS NOT STARTED');$('status').className='v';
+set('cap-l','NO AUCTION YET');set('cap-r','');set('snap','');
+show('gate',false);show('lock-bid',false);show('lock-settle',false);
+kr('');return}
+var ac=acts(cur),fresh=fS();
+set('day',cur.tokenId);
+set('bid',cur.hasBid?fmtE(cur.amount)+' ETH':'NO BIDS');
+set('bidder',cur.hasBid?short(cur.bidder):'—');
+set('cap-r',ac.bid?'LIVE':(cur.settled?'SETTLED':(ac.unsure?'UNCERTAIN':'AWAITING SETTLEMENT')));
+if(ac.bid){
+var left=cur.endTime-hiNow();
+var hh=Math.floor(left/3600),mm=Math.floor(left%3600/60),ss=left%60;
+set('clock',String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0')+':'+String(ss).padStart(2,'0'));
+var over=hiNow()-(cur.startTime+86400);
+set('status',(cur.paused?'LIVE — AUCTION HOUSE PAUSED':(over>0?'OVERTIME — '+Math.floor(over/60)+' MIN PAST SCHEDULED CLOSE':'LIVE AUCTION'))+(fresh?'':' · STALE'));
+$('status').className='v hot';
+}else if(ac.unsure){
+set('clock','--:--:--');
+set('status','DEADLINE UNCERTAIN — NO ACTION OFFERED'+(fresh?'':' · STALE'));
+$('status').className='v hot';
+}else{
+set('clock','00:00:00');
+set('status',(cur.settled?'SETTLED':'ENDED — SETTLE'+(cur.paused?' · PAUSED, NO NEXT':' TO START THE NEXT'))+(fresh?'':' · STALE'));
+$('status').className=cur.settled?'v':'v hot blink'}
+if(rcp){
+if(rcp.key!==snap.key)kr(RV+'STATE CHANGED');
+else if(!snap.q&&!hc())kr(RV+'VERIFICATION LOST');
+else if(rcp.kind==='bid'&&!ac.bid)kr(RV+'AUCTION MAY HAVE ENDED');
+else if(rcp.kind==='bid'&&!aOk())kr(RV+'ART NO LONGER VERIFIED');
+else if(rcp.kind==='settle'&&!ac.settle)kr(RV+'STATE CHANGED');
+else if(mono()>rcp.until)kr('RECIPE EXPIRED — LOCK A FRESH ONE');
+}
+var canAct=fresh&&(snap.q||hc());
+show('gate',!!(fresh&&!snap.q&&!hc()&&(ac.bid||ac.settle||ac.unsure)));
+show('lock-bid',!!(canAct&&ac.bid&&aOk()&&!(rcp&&rcp.kind==='bid')));
+show('lock-settle',!!(canAct&&ac.settle&&!(rcp&&rcp.kind==='settle')));
+show('bid-sec',!!(rcp&&rcp.kind==='bid'));
+show('settle-sec',!!(rcp&&rcp.kind==='settle'));
+if(rcp)set(rcp.kind+'-life','DAY '+rcp.tokenId+' · EXPIRES IN '+Math.max(0,Math.ceil((rcp.until-mono())/1000))+'S');
+set('snap','SNAPSHOT '+el()+'S OLD · '+(snap.q?snap.agree+'/'+snap.total+' ORIGINS AGREE':'SINGLE ORIGIN — UNVERIFIED')+' · CHAIN '+new Date(snap.tsHi*1000).toUTCString())}
+function cp(id,btn){
+var t=$(id).textContent;
+var done=function(){btn.textContent='COPIED';btn.className='cp';setTimeout(function(){btn.textContent='COPY'},1200)};
+var fail=function(){
+btn.textContent='FAILED — SELECT MANUALLY';btn.className='cp fail';
+var r=document.createRange();r.selectNodeContents($(id));
+var s=window.getSelection();s.removeAllRanges();s.addRange(r)};
+function legacy(){
+try{
+var ta=document.createElement('textarea');
+ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+document.body.appendChild(ta);ta.select();
+var ok=document.execCommand('copy');
+document.body.removeChild(ta);
+ok?done():fail()
+}catch(e){fail()}}
+if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,legacy);
+else legacy()}
+rf();
+setInterval(rd,1000);
+setInterval(rf,30000);
+setInterval(function(){if(!snap)rf()},10000);
+</script>
+</body>
+</html>
